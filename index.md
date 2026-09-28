@@ -13,6 +13,7 @@
 
 - [From Acceptance Checklists to AI Evals: How Software Testing Evolved](HR_HistoryReview/X/X_HR_A_01_software-testing-to-ai-evals.md)
 - [From Peer Inspection to AI-Generated Change Review: How Code Review Evolved](HR_HistoryReview/X/X_HR_A_02_code-review-to-ai-generated-change-review.md)
+- [From Requirements Documents to AI Context: How Document-Driven Development Evolved](HR_HistoryReview/X/X_HR_A_03_document-driven-development.md)
 
 ## Trace ID
 
