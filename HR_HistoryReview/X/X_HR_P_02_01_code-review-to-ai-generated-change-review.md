@@ -1,15 +1,11 @@
-Before designing AI code review, let's look back:
+AI can generate code, tests, summaries, and review comments.
 
-What has code review historically reviewed?
-What problem was it trying to solve?
-
-Now that AI can generate the change, what are we really reviewing?
+So what should code review center on?
 
 Code quality?
-The requirement?
-The implementation?
-The original intent?
+Requirement fit?
+Original intent?
 
-What do you think belongs at the center of AI code review?
+Maybe the real target is no longer the diff.
 
-Perhaps every enterprise gives AI a different task, so what needs to be reviewed should be different too.
+It is whether the generated change belongs.

@@ -1,24 +1,10 @@
-We used to treat documents as records for humans.
+AI changes documentation.
 
-In AI development, documents may become operating context:
+Docs are no longer only records for humans.
 
-requirements,
-constraints,
-examples,
-policies,
-acceptance criteria,
-and evidence.
+They can become operating context:
+requirements, constraints, policies, and evidence.
 
-So the question changes.
+So the key question is not "do we have enough docs?"
 
-Not "do we have enough documentation?"
-
-But:
-
-Which document is authoritative?
-Which one is stale?
-Which one is only an example?
-Which one should guide the AI's action?
-
-Document-driven development may be coming back, but in a very different form.
-
+It is: which docs should guide the AI?
