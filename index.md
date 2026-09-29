@@ -25,6 +25,13 @@
 
 # 單篇文章
 
+## Linkedin
+
+### 2026-09
+
+- [When a New Technology Arrives, What Exactly Should Become the Product?](Linkedin/20260929_A_new-technology-product-boundary.md)
+- [AI Is Not One Product Bet](Linkedin/20260929_P_new-technology-product-boundary.md)
+
 ## X
 
 ### 2026-09
