@@ -1,59 +1,46 @@
 # You Cannot Govern an Engineering Decision If Its Record Is Only a Story
 
-## Most decision records describe a plausible decision after the fact, but do not prove what was observable when the decision was made
+## Most decision records explain what happened afterward. They do not show what was visible when the choice was made.
 
 [[M_EBG_A_02-0.png]]
 
-An AI agent is asked to modify the retry behavior of a payment client.
+An AI agent is asked to change the retry behavior of a payment client.
 
-The resulting decision record looks reassuring. It says that the agent considered two retry strategies, applied the idempotency and public API constraints, selected one bounded retry, and changed the implementation.
+Its decision record looks reassuring. The agent considered two options, respected the idempotency and public API constraints, selected one bounded retry, and updated the code.
 
-But when a reviewer asks how the record was created, the answers become less certain:
+Then a reviewer asks a few simple questions:
 
-- Which input artifacts and versions were available, delivered, and actually accessed before the decision?
-- Were both alternatives actually evaluated during execution, or generated afterward to complete the template?
-- Were the listed rules delivered to the agent, merely available in the repository, or inferred from the final output?
-- Is the rationale an execution-time explanation or a retrospective narrative?
-- Does the timestamp come from a captured event or an estimated sequence?
-- Who made the decision: the requester, the agent, the workflow, an approver, or some combination of them?
-- Does the stated impact describe an expected effect or a result that was later verified?
-- Did the approved and executed result match the option that the record says was selected?
+- Which context fragments were actually sent to the LLM?
+- Were both alternatives actually considered, or added later to complete the record?
+- Did the agent receive the listed constraints before it selected an option?
+- Is the rationale a captured explanation or a retrospective story?
+- Did the decision that appeared during generation match the generated code?
 
 The organization has a decision document. It does not yet have reliable evidence of decision behavior.
 
 That is the governance problem:
 
-> If a decision record does not distinguish observed behavior from declared explanation, derived state, and verified outcome, governance cannot determine what happened, what is merely claimed, or what the evidence can actually support.
+> If a decision record mixes captured behavior with a story written afterward, governance cannot tell what actually happened during generation.
 
-Before decision behavior can be governed, engineering must first make the relevant parts of that behavior observable.
+Before a decision can be governed, engineering must make the relevant behavior visible.
 
 ---
 
 ## 1. Governance Problem: A Decision Record Is Not Yet Decision Evidence
 
-Engineering organizations already retain many decision-related artifacts:
+Look at almost any development workflow today and you will find plenty of material that looks like governance evidence: tickets, specifications, prompts, chat histories, pull requests, tool logs, approvals, test results, and Git commits.
 
-- tickets and change requests;
-- specifications and architecture decision records;
-- prompts and conversation histories;
-- pull requests and review comments;
-- tool calls and execution logs;
-- approvals, test results, and changed engineering artifacts;
-- model telemetry and token reports.
+So the problem is not that we have nothing.
 
-The problem is that these records answer different questions.
+The problem is that these artifacts answer different questions. A specification tells us what was intended. A commit tells us what changed. A tool trace may show that a file was read. A rationale explains a choice. An approval tells us that someone accepted a result.
 
-A specification can show the intended design. A Git commit can show the resulting change. A tool trace can show that a file was accessed. A rationale can show the explanation supplied by a human or agent. An approval can show that someone accepted a result.
+Useful? Absolutely. But none of them, on its own, shows the full behavior of one decision.
 
-None of these records automatically proves the complete behavior of the decision.
+Take `RULE-PAYMENT-IDEMPOTENCY@v4`. If it appears in the decision record, we know it was cited. We still do not know whether the agent received it before choosing, used it to compare the alternatives, or mentioned it afterward because the final code happened to comply.
 
-This creates an **Evidence-Claim Disconnect**: evidence is retained, but the organization has not defined which governance claim each item supports.
+Rationale has the same limitation. It helps a reviewer understand the stated reason for a choice, but it is not a window into the model's private reasoning. Research on chain-of-thought faithfulness has shown that a plausible explanation can leave out influences on the answer.
 
-For example, finding a rule identifier in a decision document may support the claim that the rule was cited. It does not, by itself, prove that the rule was delivered before selection, interpreted correctly, or applied to reject a non-compliant option.
-
-Likewise, a well-written rationale may explain why an option appears reasonable. It does not prove that the stated rationale faithfully represents the process that produced the choice. Research on chain-of-thought explanations has shown that model-generated explanations can be plausible while omitting influences on the answer. Governance should therefore evaluate retained engineering evidence, not treat generated reasoning as direct access to a model's internal process.
-
-The goal is not to reproduce hidden cognition. The goal is to establish what the engineering system can legitimately observe and support.
+What we need is neither an abstract decision summary nor raw model telemetry such as token probabilities and confidence values. We need the observable parts of decision behavior to be made explicit: what went in, what options appeared, what constraints were used, what was selected, and what was actually implemented.
 
 [[M_EBG_A_02-1.png]]
 
@@ -61,450 +48,195 @@ The goal is not to reproduce hidden cognition. The goal is to establish what the
 
 ## 2. Existing Solutions Preserve Parts of the Decision
 
-Several established practices already contribute useful pieces.
+Fortunately, we do not need to invent everything from scratch.
 
-Architecture Decision Records capture a decision, its context, and consequences. They are effective for preserving durable architectural knowledge, but their usual purpose is not to provide a complete event-level account of an agentic workflow.
+Architecture Decision Records preserve context, a selected option, and consequences. They are valuable for long-lived architecture knowledge, but they usually summarize a decision rather than capture one decision event inside an agentic workflow.
 
-W3C PROV provides a general model for describing entities, activities, agents, usage, generation, derivation, association, and delegation. It offers a strong foundation for expressing provenance relationships, but it does not decide which decision behavior an engineering governance problem requires.
+W3C PROV models relationships among entities, activities, agents, usage, generation, and delegation. Decision provenance extends this thinking to inputs, decisions, actions, and effects. These models provide useful relationships, but an organization must still decide what needs to be observed for its governance question.
 
-Decision provenance extends provenance thinking to the relationships among inputs, decisions, actions, and their effects. This is close to the accountability problem, although an organization must still define the observable boundary of each individual engineering decision.
+Agent telemetry can retain model requests, tool calls, files accessed, timing, and outputs. Assurance cases, review, and approval can connect claims to evidence and judgment.
 
-Logs and agent telemetry can preserve model requests, tool calls, files accessed, outputs, timing, and runtime identities. Those observations are important, but a log event does not explain its governance significance by itself.
-
-Assurance cases, reviews, and approvals connect claims with supporting evidence and judgments. Yet they depend on engineering systems producing evidence that can be identified and evaluated in the first place.
-
-These practices are complementary:
+Put them side by side and the division of labor becomes clearer:
 
 ```text
-Decision documentation
-    preserves an explanation of a decision
-
-Provenance
-    relates entities, activities, agents, and derivations
-
-Telemetry
-    captures selected runtime events
-
-Assurance and review
-    evaluate claims against evidence
+Decision documentation explains the choice
+Provenance connects actors, activities, and artifacts
+Telemetry captures selected events
+Review evaluates claims against evidence
 ```
 
-Together they provide valuable records. None, by itself, defines the complete observable boundary required to govern one AI-assisted engineering decision.
+That gives us several useful pieces. What it does not yet give us is one clear, event-level view of an AI-assisted engineering decision.
 
 ---
 
 ## 3. What Existing Solutions Still Cannot Resolve
 
-Decision behavior becomes difficult to govern when several states collapse into one record.
+This is where an otherwise polished decision record starts to come apart: it often contains more than the generation actually did.
 
-### The decision point is unclear
+Start with the decision point. A pull request can contain dozens of small choices, yet the workflow rarely marks the moment when one choice became necessary or shows which later action depended on it.
 
-A final artifact contains many choices, but the workflow may not identify when a choice became necessary, when it was made, or which action depended on it. A generated list of "important decisions" after completion is not equivalent to captured decision events.
+The decision basis is just as easy to misread. A file may exist in the repository without ever being read. A rule may be available without being delivered. A conversation may have been summarized before the choice. Looking at today's repository cannot tell us what was actually present at that moment.
 
-### The actors and authorities are mixed together
+Alternatives are particularly easy to rewrite. A template that demands two options can encourage someone, or an AI, to invent a second option after the fact. If alternatives appeared during generation, record them. If they did not, do not add them merely to complete the template.
 
-A single `Author` field can hide multiple roles. A person may initiate the task, an agent may propose an option, a workflow rule may constrain selection, and another person may approve the result. Governance needs to know who or what performed each role, not only whose name appears on the document.
+Rules have the same problem. A repository may contain hundreds of rules, but Development Evidence should not copy all of them into the record. It should record a rule only when that rule was actually triggered or used during the generation.
 
-### The decision basis is implicit
+Context can also be overstated. A specification may be one hundred pages long while only three sections were sent to the LLM. Recording the full specification as input would make the evidence look complete while hiding what the model actually received.
 
-Files may exist without having been read. Rules may be available without having been delivered. Conversation content may have been summarized or truncated. Without versioned references to the effective prompt and context, a later reviewer may inspect information that was not present when the decision occurred.
-
-### Alternatives can be reconstructed fiction
-
-A template that always requires two options encourages complete-looking comparisons. When only one path was actually available, the second option may be invented after the fact. When several alternatives were explored through tools or intermediate outputs, a compact narrative may omit them.
-
-The record should allow `none observed`, `not captured`, and `unknown`. Absence is more governable than manufactured certainty.
-
-### Constraints are listed but not connected to behavior
-
-Recording `RULE-017` says little unless the organization can determine its version, whether it was applicable, whether it was available or delivered, how it affected evaluation, and whether compliance was later verified.
-
-### Rationale is confused with evidence
-
-A rationale is a declared explanation. It is valuable, but its evidential status differs from an execution event, an input artifact, or an independently verified result. Treating all four as equivalent produces false confidence.
-
-### Impact is predicted rather than verified
-
-Decision records often describe what a choice "will" improve. Governance also needs the resulting engineering action, affected artifact, consistency verification, and any divergence from the selected option. Otherwise the record ends at intention and never shows whether this decision was actually realized.
-
-### Time and sequence are approximate
-
-Estimated timestamps can make a record appear precise while obscuring that no event was captured. For governance, event order may matter more than decorative precision: was a rule supplied before the choice, was approval obtained before implementation, and was verification completed before acceptance?
-
-These are not documentation-quality problems. They determine whether an organization can review responsibility, detect control failure, reproduce the decision basis, and improve the workflow.
+That may sound like a documentation problem, but it is really an evidence problem. If the record expands beyond what actually happened, later governance begins from a reconstruction rather than from the development behavior itself.
 
 ---
 
 ## 4. Governance Scope and the Elements That Must Become Visible
 
-The previous article argued that engineering must create the state governance evaluates. This requires a unit more precise than "the information we should keep."
+To keep the problem manageable, let us narrow the lens. We are looking at one decision that occurs while an LLM generates a document or a piece of code.
 
-A **Governance Engineering Element**, or GEE, is:
+The broader series calls the engineering representation needed for a governance judgment a **Governance Engineering Element**. Here, the specialized elements are **Decision Behavior Engineering Elements**, or DBEEs: the parts of the generation behavior that can be directly recorded and traced.
 
-> An identifiable engineering representation required to make a governance condition observable, evaluable, controllable, reviewable, auditable, or improvable.
+The rule for Development Evidence is simple:
 
-The definition starts from a Governance Problem. It does not prescribe one universal record containing everything.
+> Record what was actually sent, what actually appeared during the decision, what actually triggered, and what was actually generated.
 
-```text
-Governance Problem
-    -> Governance Claim
-    -> Required Governance Engineering Elements
-    -> Evidence
-    -> Evaluation
-    -> Governance Action
-    -> Improvement
-```
+### Record the context actually sent
 
-For decision behavior, the specialized elements are **Decision Behavior Engineering Elements**, or DBEEs:
+If an entire specification was supplied, record the specification and version. If only selected sections or retrieved chunks were supplied, record those sections or chunks.
 
-> Identifiable engineering representations required to make engineering decision behavior observable, recordable, traceable, and evaluable.
+Do not list every document available in the repository. Availability is not Development Evidence. The relevant evidence is the effective context used for this generation.
 
-A DBEE is not a factor assumed to cause a decision. It is an element that governance needs to identify about the behavior surrounding a decision.
+### Record alternatives only when they appear
 
----
+If the generation produced three implementation options, record all three. If it moved directly to one solution, record that decision without inventing rejected alternatives.
 
-### One record must represent one decision event
+The goal is not to force every decision into the same shape. It is to preserve the behavior that actually occurred.
 
-The unit of governance in this article is not the complete design of a system, an entire specification, or a summary of all decisions made during a development run.
+### Record rules only when they trigger
 
-It is one identifiable engineering decision event:
+If a rule is triggered during the decision, record the Rule ID, version, trigger, and the effect it had on the generated choice. If no rule is triggered, do not pad the record with every rule that might have been relevant.
 
-> At a specific decision point, given identifiable inputs and constraints, an authorized human, agent, or workflow evaluates one or more available paths and selects a course of engineering action.
+For example, if `RULE-PAYMENT-IDEMPOTENCY@v4` causes the generation to reject a retry strategy that creates a new key, that trigger belongs in the evidence.
 
-Examples include choosing whether to retry a failed payment request, selecting the shape of one API response, deciding where one validation rule belongs, or determining whether one database change requires a migration.
+### Record the decision and generated result
 
-A specification may contain hundreds of such decisions. An ADR may summarize a significant one. A pull request may contain several. For Decision Behavior Evidence, each record needs a stable Decision ID and a bounded subject so that its inputs, constraints, alternatives, selection, realization, and evidence do not become mixed with other decisions.
-
----
-
-### A single decision must be observable before, during, and after selection
-
-The exact DBEE set depends on the Governance Problem. But a governable decision record must cover three observation windows. Recording only the selected option captures a conclusion without its basis or its actual consequence.
-
-```text
-Decision Input Snapshot
-    -> Constraints and Authority
-    -> Alternatives
-    -> Evaluation
-    -> Declared Selection
-    -> Approval or Override
-    -> Realized Decision
-    -> Consistency Verification
-    -> Trace
-```
+Finally, connect the decision behavior to the document or code that was generated. The useful question is straightforward: what decision appeared during generation, and where did its result appear in the output?
 
 [[M_EBG_A_02-2.png]]
-
-### Before the decision: input, constraints, and authority
-
-Governance first needs the point-in-time basis from which the decision could be made:
-
-- decision request, problem, subject, and triggering event;
-- current state known before the decision;
-- Prompt Artifact ID and version;
-- Context Manifest and execution version;
-- Change Scope and relevant system specification version;
-- input artifacts and their versions;
-- whether each input was available, delivered, accessed, or missing;
-- applicable rules, constraints, and evaluation criteria;
-- assumptions, unknowns, and unresolved input conflicts;
-- requester, decision authority, delegated authority, and approval threshold.
-
-These elements answer more than "what files existed?" A repository may contain a rule that was never delivered to the agent. An artifact may have been delivered but never accessed. A constraint may have been cited without being applied. These are different observable states and must not be collapsed into one `Input Artifacts` list.
-
-Pre-decision observability establishes what the human, agent, or workflow was allowed and equipped to decide. It does not claim access to private model reasoning.
-
-### During the decision: alternatives, evaluation, and selection transparency
-
-Governance then needs to observe how the decision was formed at the level the engineering system can support:
-
-- Decision ID, version, point, stage, run, event time, and Trace ID;
-- proposer, evaluator, selector, and their identities;
-- candidates actually observed during execution;
-- source and formation event of each candidate;
-- criteria and constraints applied to each candidate;
-- supporting or conflicting evidence used in evaluation;
-- rejected, deferred, or escalated candidates;
-- selected option and selection event;
-- declared rationale, its author, and capture time;
-- expected impact, uncertainty, exception, override, or dissent.
-
-Candidates should be recorded only when supported. A required template shape must not create alternatives that were never observed. Likewise, a rationale is a declaration associated with the selection, not proof of hidden cognition.
-
-This window provides **decision transparency**: which alternatives were visible, how constraints related to them, what was selected, what impact was expected, and how the selection traces back to its basis.
-
-### After selection: realized decision and consistency verification
-
-A declared selection is not necessarily the decision that is realized in the engineering artifact.
-
-An approver may modify it. A development control may block it. An engineer or agent may implement only part of it. The resulting specification, design, or code may also diverge from the selected option.
-
-The post-selection observation remains inside the development stage and inside the boundary of this single decision. It needs:
-
-- approval, rejection, modification, escalation, or override event;
-- final authority responsible for the outcome;
-- realized decision, including differences from the declared selection;
-- engineering action actually authorized and performed;
-- specification, design, code, or test artifact actually changed;
-- expected engineering effect compared with the resulting artifact state;
-- review or test used to verify that the artifact realizes the selected option;
-- correction or rework when selection and realization diverge;
-- complete trace from the input snapshot to the changed artifact.
-
-This distinction produces three states that must remain separate:
-
-```text
-Declared Selection
-    What the selector said should be chosen
-
-Authorized Decision
-    What the applicable authority allowed to proceed
-
-Realized Decision
-    What was actually written into the specification, design, or code
-```
-
-Only by connecting all three can governance determine whether this individual decision was followed, altered, blocked, or incorrectly realized. Deployment and production behavior may provide evidence for other governance problems, but they are outside the scope of this decision record.
-
-### Evidence quality
-
-- evidence item ID, source, and location;
-- capture method and capture time;
-- version or integrity hash;
-- retention and access classification;
-- relationship to the DBEE and governance claim;
-- evidence status: `observed`, `declared`, `derived`, or `verified`;
-- confidence, limitations, and `unknown` where appropriate.
-
-Evidence quality is itself part of governability. A field without provenance may be data, but it is weak evidence.
 
 ---
 
 ## 5. Engineering the Decision Evidence
 
-These terms should not be collapsed.
+Once that behavior is visible, the engineering design becomes much easier to explain. We only need to keep three things separate:
 
 ```text
-Decision Behavior Engineering Element
-    What governance needs to identify about decision behavior
+Decision behavior
+    What occurred while the document or code was generated
 
-Engineering Decision Behavior Evidence
-    A retained item that supports a point-in-time state of that element
+Development Evidence
+    The retained context, trigger, alternative, decision, or output event
 
-Governance Claim
-    A statement made about the element using that evidence
-
-Governance Judgment
-    An evaluation of the claim under an applicable rule
+Claim
+    What someone says the evidence demonstrates
 ```
 
-Consider an `Applied Constraint` element.
+Consider the claim: "The idempotency rule was applied when the retry option was selected."
 
-The claim might be:
+A document listing the rule supports only that it was cited. Stronger Development Evidence would show that the rule entered the supplied context, was triggered during generation, and changed or constrained the generated result.
 
-> Security rule `SEC-017` was applied when the architecture option was selected.
+From there, a few practical rules follow:
 
-A decision document that lists `SEC-017` supports only that the rule was declared or cited. Stronger evidence may include a versioned context record showing the rule was delivered before selection, an evaluation event connecting the rule to each candidate, and an independent review confirming that the chosen result complies with it.
+- give one bounded decision one stable Decision ID;
+- record only the context fragments actually sent to the LLM;
+- bind those context fragments, triggered rules, and generated artifacts to exact versions;
+- capture the behavior while generation occurs instead of rebuilding it later;
+- include alternatives only when they actually appear;
+- include rules only when they actually trigger;
+- connect each evidence item to the claim it supports;
+- append corrections rather than silently rewriting the past;
+- use a Trace ID to connect the supplied context, decision behavior, and generated artifact.
 
-The evidence does not need to be equally strong for every decision. It needs to be explicit enough that governance can distinguish what is supported from what is assumed.
+That capture layer is governance evidence infrastructure. Think of it as the plumbing that preserves what actually happened during generation for later review.
 
-### Engineering rules for a decision evidence record
+But having the plumbing is not the same as making the governance decision.
 
-The record should be designed around several rules:
+Engineering can make the supplied context, generated alternatives, triggered rules, decisions, and outputs visible. Evidence can support claims about them. Neither approves nor rejects the decision.
 
-- one Decision ID represents one bounded decision subject;
-- inputs, constraints, alternatives, selections, and realizations use stable IDs and versions;
-- events are captured when they occur rather than reconstructed only after completion;
-- initiator, proposer, selector, approver, executor, and recorder remain separate roles;
-- every evidence item identifies its source, capture method, time, integrity reference, and related DBEE;
-- `observed`, `declared`, `derived`, and `verified` remain different evidence states;
-- `unknown`, `not captured`, and `none observed` are valid values;
-- corrections create a new version or linked event instead of silently rewriting the past;
-- Trace IDs connect the single decision to its input snapshot and resulting engineering artifact.
-
-Adding these fields to a document after the work is complete is not enough. The development environment must capture observable events and stable references while the decision occurs.
-
-This is the role of **Governance Evidence Infrastructure**:
+Governance begins later, when a governance process evaluates a claim using that evidence and decides what action follows.
 
 ```text
-Governance Engineering Architecture
-    organizes the elements required by governance problems
-
-Governance Evidence Infrastructure
-    captures, preserves, and connects supporting evidence
-
-Decision Behavior Engineering Elements
-    define what must be observable about one decision
-
-Engineering Decision Behavior Evidence
-    supports claims about those elements at a specific point in time
+Engineering makes the decision behavior visible
+Evidence preserves what can be supported
+Audit evaluates the claims
+Governance decides and acts
 ```
-
-### Infrastructure is not governance
-
-Creating observable elements does not mean that governance has occurred. Capturing evidence does not mean that a decision has been governed.
-
-Engineering can establish the decision boundary, preserve the input state, identify roles, record alternatives, connect constraints to evaluation events, and trace a selection to its realized artifact. These capabilities make the decision governable. They do not determine whether the decision is acceptable.
-
-Evidence has the same boundary. An event record may support the claim that a rule was delivered. A review may support the claim that the realized code matches the authorized decision. Neither item approves, rejects, escalates, or corrects the decision by itself.
-
-Governance still requires:
-
-- a governance claim to evaluate;
-- applicable policy, rule, or acceptance criteria;
-- an authorized governance role;
-- an evaluation of evidence strength and limitations;
-- a judgment such as accept, reject, request correction, or escalate;
-- a control or improvement action based on that judgment.
-
-The relationship is therefore:
-
-```text
-Engineering
-    creates observable and traceable decision state
-
-Evidence
-    supports claims about that state
-
-Governance
-    evaluates those claims under rules and authority, then acts
-```
-
-Governance Engineering Elements and Governance Evidence Infrastructure are necessary foundations for governance. They are not substitutes for governance.
-
-This is what **Engineering Before Governance** means: governance cannot evaluate what engineering has not first made identifiable and observable. Engineering comes first as infrastructure, but governance remains a separate act of judgment and control.
 
 [[M_EBG_A_02-3.png]]
 
-The Evidence Skill that motivated this article is one implementation direction for that infrastructure. Its scope is deliberately limited. It does not provide evidence for every governance question, and it does not reveal an agent's hidden reasoning. It captures evidence about identifiable engineering decision behavior: inputs, roles, alternatives, constraints, selection, realization, traceability, and verification.
+The Evidence Skill that motivated this article is one way to build that capture layer. Its job is intentionally narrow: faithfully record the supplied context, alternatives that appeared, rules that triggered, decisions that formed, and the document or code that was generated. It does not reveal hidden reasoning, and it does not try to answer every governance question.
 
-With those elements engineered, the organization can apply a repeatable loop:
+That boundary makes the process repeatable:
 
 ```text
-Plan
-    Define the elements and evidence strength required for this decision type
-
-Do
-    Capture the point-in-time decision events and artifact versions
-
-Check
-    Evaluate governance claims against the evidence that supports them
-
-Act
-    Correct missing instrumentation, authority gaps, or decision controls
+Plan: define where generation behavior can be captured
+Do: record supplied context, decision events, and generated artifacts
+Check: evaluate claims against evidence
+Act: improve the generation or the capture mechanism
 ```
 
 ---
 
 ## 6. Example: One Retry Decision
 
-The following condensed template is not a universal schema. It demonstrates how a record can organize DBEEs while preserving the status of its evidence.
+Now we can return to the payment retry decision. The example records only what occurred while the code was generated.
 
 ```yaml
-decision:
-  id: CODE-DEC-042
-  version: 1
-  subject: Choose retry behavior for transient payment failures
+development_evidence:
+  id: DEV-EVIDENCE-042
+  trace_id: TRACE-payment-retry-184
 
-trace:
-  run_id: RUN-payment-184
-  scope_id: SCOPE-payment-retry-v2
-  prompt_artifact: PROMPT-payment-retry-v3
-  context_manifest: CTX-RUN-payment-184-v1
+generated_artifact:
+  type: code
+  ref: src/payment/client.ts@sha256:...
 
-before_decision:
-  request:
-    ref: REQ-payment-retry-018@v2
-    current_state: Payment client does not retry transient failures
-    trigger_event: EVT-184
-  roles_and_authority:
-    initiator: human:Spark-Tsai
-    decision_authority: agent:payment-dev-agent-v4
-    approval_authority: human:payment-maintainer
-    authority_rule: AUTH-CODE-REVIEW-002@v3
-  inputs:
-    - ref: src/payment/client.ts@sha256:...
-      available: verified
-      delivered: observed
-      accessed: observed
-      evidence: [EVT-context-delivery-087, EVT-file-read-311]
-  constraints:
+input_context:
+  - ref: REQ-payment-retry-018@v2
+    fragment: retry-temporary-failures
+    evidence: EVT-context-101
+  - ref: VSS-payment-system@v12
+    fragment: system-design/payment-retry
+    evidence: EVT-context-102
+  - ref: src/payment/client.ts@sha256:...
+    fragment: lines-118-176
+    evidence: EVT-context-103
+  - ref: RULE-PAYMENT-IDEMPOTENCY@v4
+    fragment: preserve-existing-key
+    evidence: EVT-context-104
+
+decision_behavior:
+  subject: Choose retry behavior for temporary payment failures
+  alternatives:
+    - Do not retry
+    - Retry once with a new idempotency key
+    - Retry once with the existing idempotency key
+  triggered_rules:
     - ref: RULE-PAYMENT-IDEMPOTENCY@v4
-      applicable: verified
-      delivered: observed
-      evidence: EVT-context-delivery-088
-    - ref: RULE-PUBLIC-API-STABILITY@v2
-      applicable: verified
-      delivered: observed
-      evidence: EVT-context-delivery-089
-  assumptions:
-    - text: The payment provider classifies retryable failures explicitly
-      status: declared
+      trigger: Candidate introduced a new key for the retry.
+      effect: Candidate was rejected.
+      evidence: EVT-rule-trigger-021
+  decision: Retry once for temporary failures using the existing key
+  evidence: EVT-decision-023
 
-during_decision:
-  decision_point:
-    stage: edit-payment-client
-    observed_at: 2026-04-29T00:00:40Z
-    event: EVT-decision-point-020
-  candidates:
-    - name: Do not retry
-      status: observed
-      evidence: EVT-candidate-021
-    - name: Retry once for explicitly transient failures
-      status: observed
-      evidence: EVT-candidate-022
-  evaluation:
-    - rule: RULE-PAYMENT-IDEMPOTENCY@v4
-      candidate: Retry once for explicitly transient failures
-      effect: allowed only when the existing idempotency key is preserved
-      status: derived
-      evidence: EVT-evaluation-024
-  declared_selection:
-    selected: Retry once for explicitly transient failures
-    selector: agent:payment-dev-agent-v4
-    event: EVT-selection-023
-    expected_engineering_effect: One bounded retry without a public API change
-    declared_rationale:
-      text: Handles temporary provider failure while preserving idempotency.
-      status: declared
-
-after_decision:
-  authorization:
-    approver: human:payment-maintainer
-    outcome: approved-with-condition
-    event: EVT-approval-025
-  realized_decision:
-    value: One retry for retryable provider errors using the existing idempotency key
-    differs_from_declared_selection: false
-    evidence: EVT-code-change-026
-  engineering_action:
-    action: Updated payment client retry branch
-    output_ref: src/payment/client.ts@sha256:...
-    evidence: EVT-artifact-write-319
-  verification:
-    method: code review and focused retry tests
-    result: implementation matches the authorized decision
-    reviewer: human:payment-maintainer
-    evidence: [REVIEW-2026-041, TEST-payment-retry-088]
-  divergence:
-    status: none-observed
-
-limitations:
-  - No claim is made about the model's private reasoning.
-  - The declared rationale has not been established as causally faithful.
+generation_result:
+  change: Added one bounded retry and reused the existing key.
+  evidence: EVT-code-generation-026
 ```
 
-This template corrects several common weaknesses.
+The record does not claim to know what happened inside the model. It shows the exact context fragments supplied, the alternatives that appeared, the rule that triggered, the decision that formed, and the code change that was generated.
 
-It separates pre-decision inputs and constraints from the behavior that occurs during selection. It distinguishes inputs that were available, delivered, and accessed. It records observed candidates instead of forcing exactly two. It then separates declared selection, authorization, realized decision, engineering action, and consistency verification. Most importantly, it exposes whether this one decision was realized differently from what was originally selected.
+The structure is intentionally conditional. If no alternatives appeared, the `alternatives` section is omitted. If no rule triggered, there is no `triggered_rules` section. If only three sections of a long document entered context, only those three sections are recorded.
 
-The same structure also makes missing evidence visible. If candidate generation was not captured, the record can say `not captured`. If the selector cannot be identified, it can say `unknown`. That is a governance signal, not a formatting failure.
+Having this record does not mean the decision has been governed. It gives later governance a faithful account of the development behavior it can inspect.
 
-The completed template is still not the governance result. It is an engineering interface for connecting one decision event to the evidence that supports it. A governance judgment occurs when an authorized role evaluates a claim against that evidence and decides what action follows.
-
-> Engineering Decision Behavior Evidence does not reproduce hidden reasoning. It supports claims about identifiable Decision Behavior Engineering Elements at a specific point in time.
-
-Having engineered the elements does not mean the decision has been governed. Having evidence does not mean governance has been completed. Both provide the infrastructure without which repeatable governance cannot operate.
+> Evidence does not turn a story into truth. It tells governance which parts of the story the engineering system can actually support.
 
 ---
 
