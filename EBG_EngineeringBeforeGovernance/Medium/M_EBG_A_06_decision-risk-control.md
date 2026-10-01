@@ -2,7 +2,7 @@
 
 ## A red cell in a risk matrix does not show which development decision created the risk, what evidence supports it, or whether a control actually reduced it.
 
-[[M_EBG_A_05-0.png]]
+[[M_EBG_A_06-0.png]]
 
 An AI agent changes the retry behavior of a payment client.
 
@@ -51,7 +51,7 @@ This also sets an important boundary:
 
 A change can pass tests and still carry decision risk because its origin, boundary, rule application, or effect cannot be established. Conversely, a visible defect is not automatically a decision-governance failure; it may be an ordinary implementation error with clear provenance and effective correction.
 
-[[M_EBG_A_05-1.png]]
+[[M_EBG_A_06-1.png]]
 
 ---
 
@@ -118,7 +118,7 @@ Development Evidence
 
 The third gap is interpretation.
 
-Development Evidence from Article 02 may show that an alternative appeared and a rule triggered. Article 03 may show that the architecture viewpoint was missing from the supplied context. Article 04 may show that the final code satisfies a rule even though rule invocation cannot be proven.
+Development Evidence from Article 02 may show that an alternative appeared and a rule triggered. Article 03 may connect that finding to a fine-grained role, version, timestamp, and related engineering elements. Article 04 may show that the architecture viewpoint was missing from the supplied context. Article 05 may show that the final code satisfies a rule even though rule invocation cannot be proven.
 
 Those are observable findings. They are not yet risk judgments.
 
@@ -216,7 +216,7 @@ Record the residual risk or unresolved uncertainty after the control. A risk is 
 
 These elements make risk inspectable without pretending that every judgment can be reduced to a number.
 
-[[M_EBG_A_05-2.png]]
+[[M_EBG_A_06-2.png]]
 
 ---
 
@@ -226,11 +226,13 @@ The engineering design begins with evidence from the earlier articles.
 
 Article 02 records what actually happened during generation: supplied context, alternatives that appeared, rules that triggered, the decision, and the generated artifact.
 
-Article 03 compares the required development basis with what was actually supplied.
+Article 03 gives each fine-grained engineering unit a role-aware, versioned, and timestamped Trace ID so that evidence and relationships can be followed.
 
-Article 04 determines which rule applied, whether it entered the decision, and what the available evidence can support.
+Article 04 compares the required development basis with what was actually supplied.
 
-Article 05 adds two engineering steps before risk treatment.
+Article 05 determines which rule applied, whether it entered the decision, and what the available evidence can support.
+
+Article 06 adds two engineering steps before risk treatment.
 
 **Decision Analysis** examines the structural relationship between the approved Scope and the generated effect. It answers questions such as: did the change remain inside Scope, did an unsupported effect appear, and can the effect be traced to a visible decision basis?
 
@@ -296,13 +298,13 @@ Check: compare the condition, control evidence, and resulting effect
 Act: accept residual risk or improve the engineering control
 ```
 
-[[M_EBG_A_05-3.png]]
+[[M_EBG_A_06-3.png]]
 
 ---
 
 ## 6. Example: Controlling Risk in One Payment Retry Decision
 
-Return to the retry decision from Articles 02–04.
+Return to the retry decision from Articles 02–05.
 
 The generation received the retry requirement and payment-client code. It produced three alternatives. The idempotency rule triggered and removed the option that created a new key. But the architecture viewpoint for the shared transaction boundary was not supplied, and the generated change also touched that boundary.
 

@@ -2,7 +2,7 @@
 
 ## A visible prompt is not the complete development basis, and a surviving code change does not prove what the agent received.
 
-[[M_EBG_A_03-0.png]]
+[[M_EBG_A_04-0.png]]
 
 An engineer asks an AI agent to change the retry behavior of a payment service:
 
@@ -82,7 +82,7 @@ Intent in a versioned specification
     -> recorded intent remains inspectable
 ```
 
-[[M_EBG_A_03-1.png]]
+[[M_EBG_A_04-1.png]]
 
 Conversation history preserves visible interaction. Agent telemetry can preserve selected requests, responses, tool calls, retrieval activity, and model identity. Tests and reviews preserve verification results.
 
@@ -153,7 +153,7 @@ The **Context Manifest** identifies the instructions, specifications, source art
 
 A stable **Development Change ID** and **Trace ID** connect the Prompt Artifact, Context Manifest, Decision IDs, tool events, changed artifacts, tests, and review.
 
-[[M_EBG_A_03-2.png]]
+[[M_EBG_A_04-2.png]]
 
 Put together, these elements give us a recoverable snapshot of the development basis:
 
@@ -218,7 +218,7 @@ Audit finding: matched, missing, stale, conflicting, out of scope, or unknown
 
 This comparison can reveal that an architecture viewpoint was missing, an obsolete specification was delivered, a summary removed a constraint, or an agent modified an artifact outside Scope.
 
-[[M_EBG_A_03-3.png]]
+[[M_EBG_A_04-3.png]]
 
 There is one boundary worth keeping clear. VSS, Scope, Context Manifests, Trace IDs, and Evidence do not approve or reject a change. Even Audit produces a finding, not the final judgment.
 
@@ -302,7 +302,7 @@ Notice what happened here. The Prompt Artifact did not govern the change. Neithe
 
 What they did was make the comparison possible. Audit could see that a required architecture viewpoint was missing and that a file outside Scope had been modified. The authorized maintainer could then reject the change and require correction on a supportable basis.
 
-The same Trace ID can connect this run to `CODE-DEC-042`, the individual decision to retry once. Article 02 shows what must be observed around that choice. This article shows which versioned system state and Change Scope were available when it was made.
+The same Trace ID can connect this run to `CODE-DEC-042`, the individual decision to retry once. Article 02 shows what must be observed around that choice. Article 03 establishes the fine-grained, role-aware, versioned, and timestamped trace that connects it to other engineering elements. This article shows which versioned system state and Change Scope were available when it was made.
 
 Engineering comes first because governance cannot compare, judge, or improve what engineering has not made visible.
 

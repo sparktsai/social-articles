@@ -2,7 +2,7 @@
 
 ## A rule can exist in the repository, appear in the final explanation, and still have had no observable effect on the decision.
 
-[[M_EBG_A_04-0.png]]
+[[M_EBG_A_05-0.png]]
 
 An engineering team has a clear rule for payment retry changes:
 
@@ -74,7 +74,7 @@ Governed
 
 Seen this way, the issue is not mainly whether the rule was written well. The issue is whether its path through the decision can be observed.
 
-[[M_EBG_A_04-1.png]]
+[[M_EBG_A_05-1.png]]
 
 ---
 
@@ -118,7 +118,7 @@ The first gap appears before any tool runs: we often mix guidance and rules in t
 
 Next comes applicability. A repository-wide rule may be too broad, while a path-based rule may be too narrow. Payment semantics can span several files. What we need to know is why the rule applied to this decision under this Scope, not merely where its file was stored.
 
-Even after applicability is clear, invocation remains a separate question. Article 03's Context Manifest can show that a rule was delivered. Article 02's Decision Behavior Evidence can show whether it appeared in candidate evaluation. Code review and tests can show whether the resulting artifact satisfies it.
+Even after applicability is clear, invocation remains a separate question. Article 04's Context Manifest can show that a rule was delivered. Article 02's Decision Behavior Evidence can show whether it appeared in candidate evaluation. Code review and tests can show whether the resulting artifact satisfies it.
 
 These are different claims:
 
@@ -185,7 +185,7 @@ The Rule ID must connect to VSS, Scope, Prompt Artifact, Context Manifest, Devel
 
 None of this requires one universal file format. What matters is that the meanings stay stable and the relationships can be followed.
 
-[[M_EBG_A_04-2.png]]
+[[M_EBG_A_05-2.png]]
 
 ---
 
@@ -246,17 +246,18 @@ Governance:
     accept | reject | correct | approve exception | escalate
 ```
 
-This is how Articles 02, 03, and 04 connect:
+This is how Articles 02 through 05 connect:
 
 ```text
 Article 02 asks what happened around one decision
-Article 03 asks what system and change basis was supplied
-Article 04 asks which rule applied and what the evidence supports
+Article 03 gives each fine-grained engineering unit a role-aware, versioned, and timestamped trace
+Article 04 asks what system and change basis was supplied
+Article 05 asks which rule applied and what the evidence supports
 ```
 
 Together they create governance infrastructure. Governance occurs only when an authorized process uses that infrastructure to judge and act.
 
-[[M_EBG_A_04-3.png]]
+[[M_EBG_A_05-3.png]]
 
 ---
 
