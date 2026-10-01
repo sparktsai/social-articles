@@ -1,50 +1,46 @@
 # You Cannot Govern an AI Development Run If Its Prompt and Context Disappear
 
-## Prompts and context are execution inputs, but most teams still treat them as disposable conversation
+## A visible prompt is not the complete execution basis, and a surviving code change does not prove what the agent received
 
 [[M_EBG_A_03-0.png]]
 
-An engineer asks an AI agent to change the retry behavior of a payment service.
-
-The prompt appears clear:
+An engineer asks an AI agent to change the retry behavior of a payment service:
 
 > Add one retry for temporary payment failures. Do not change the public API. Preserve the existing idempotency behavior. Run the payment integration tests.
 
-The agent reads several files, follows repository instructions, inspects an architecture document, edits the implementation, and reports that the tests passed.
+The agent reads several files, follows repository instructions, inspects design material, changes the implementation, and reports that the tests passed.
 
-Two weeks later, a production incident leads the team back to that change. The code is still in Git. The pull request is still available. The original prompt might still be somewhere in a chat history.
+Two weeks later, another engineer needs to modify the same behavior. The code is still in Git. The pull request is still available. The original prompt may still appear in a conversation history.
 
 But the team cannot reliably answer:
 
-- Which version of the architecture document did the agent read?
-- Which repository instructions were active?
-- Did the agent receive the idempotency constraint before or after it proposed the design?
+- Which version of the payment specification did the agent receive?
+- Were the business, system design, and architecture constraints all present?
+- Which repository instructions and files were delivered or accessed?
 - Was part of the conversation summarized or truncated?
-- Which files were actually loaded into context?
 - Which model, tools, permissions, and environment produced the change?
-- Did "tests passed" refer to the full integration suite or a selected command?
+- Did the agent operate within the approved Change Scope?
+- Which evidence can prove any of these claims?
 
-The change survived. The engineering conditions that produced it did not.
+The change survived. The engineering basis that produced it did not.
 
 That is the governance problem:
 
-> If the prompt and effective context of an AI development run are transient, the organization can inspect the result but cannot reliably reconstruct the basis on which the result was produced.
-
-Before an organization can govern an AI-assisted development run, it must first engineer the prompt and context into observable, versioned, and traceable execution inputs.
+> If the prompt and effective context of an AI development run are transient or unidentifiable, the organization can inspect the result but cannot reliably determine whether the run operated against the required system state and approved change boundary.
 
 ---
 
-## A Prompt Is Only the Visible Part of the Instruction
+## 1. Governance Problem: The Effective Execution Basis Is Invisible
 
 Teams often talk about "the prompt" as if it were the complete instruction given to an agent.
 
 It rarely is.
 
-The user prompt may describe the requested change, but the agent's effective instruction can also include:
+The user prompt may describe the requested change, but the agent's effective execution basis can also include:
 
 - system and organization instructions;
 - repository-level agent guidance;
-- specifications and architecture documents;
+- business, system design, and architecture specifications;
 - source files and tests selected for inspection;
 - retrieved documentation or search results;
 - earlier conversation turns and generated summaries;
@@ -52,66 +48,45 @@ The user prompt may describe the requested change, but the agent's effective ins
 - environment variables, permissions, and execution boundaries;
 - the model and agent version interpreting those inputs.
 
-Together, these form the context in which the run operates.
-
-The distinction matters because two runs can receive the same user prompt and still act differently. One may load the current architecture rule; another may retrieve an obsolete copy. One may have permission to modify a migration; another may not. One may include the full conversation; another may receive a compressed summary after the context window fills.
+Two runs can receive the same visible prompt and operate under different conditions. One may receive the current architecture rule; another may retrieve an obsolete copy. One may include the full conversation; another may receive a compressed summary after the context window fills.
 
 ```text
-Same prompt
-    + different context
+Same visible prompt
+    + different effective context
     = different execution basis
 ```
 
-Prompt governance alone is therefore too narrow. The object that needs to become observable is the **effective execution context**: the identifiable set of instructions, artifacts, capabilities, and environmental conditions delivered to an agent for a particular run.
+A conversation transcript is useful, but it does not necessarily reveal every hidden instruction, retrieved artifact, permission, transformation, or version involved in the run.
 
-This does not mean recording everything the model internally computes. It means preserving the external engineering conditions that the organization supplied and can govern.
-
----
-
-## Why Chat History Is Not an Engineering Record
-
-A conversation transcript is useful, but it was designed to support interaction, not to serve as a complete execution record.
-
-The transcript may show what a person typed and what an agent replied. It may not show every system instruction, retrieved artifact, tool definition, permission, context transformation, or file version involved in producing the reply.
-
-Even when all messages remain available, the transcript leaves a harder question unanswered:
-
-> Which parts of the available information formed the effective context of this specific action?
-
-There are at least three different states:
+It also collapses several different states:
 
 ```text
-Available context
-    Information the system could have retrieved
+Available
+    The system could provide the information
 
-Delivered context
-    Information actually supplied to the agent or model
+Delivered
+    The information entered the agent's effective context
+
+Accessed
+    The agent or tool read the information
 
 Claimed basis
-    Information the agent says influenced its result
+    A human or agent says the information influenced the result
 ```
 
-These states must not be treated as equivalent.
+A file existing in the repository does not prove that it was delivered. Delivery does not prove access. A cited rule does not prove correct application. A generated rationale does not reveal private model reasoning.
 
-A file existing in the repository does not prove that the agent read it. A rule appearing in a system prompt does not prove that the implementation complied with it. An agent citing a requirement does not prove that the requirement was the true cause of its output.
-
-Governance does not require pretending that these limitations disappear. It requires recording each claim at the level that can actually be supported.
-
-An execution record may prove that a versioned instruction was delivered. A tool trace may prove that a file was read or a test command was executed. A review may determine whether the resulting change complied with the instruction. None of those records, on its own, reveals the model's private reasoning.
-
-That boundary is important. Prompt and context governance should produce inspectable engineering evidence, not a fictional reconstruction of an AI's mind.
-
-[[M_EBG_A_03-2.png]]
+The governance requirement is therefore not to reconstruct an AI's mind. It is to make the external engineering basis of the run identifiable, versioned, and supportable by evidence.
 
 ---
 
-## What Current Engineering Practices Already Solve
+## 2. Existing Solutions Preserve Parts of the Basis
 
-The industry is not starting from nothing. Several current practices preserve part of the execution basis.
+The industry is not starting from nothing. Several established practices preserve useful parts of an AI-assisted development run.
 
-Git records versioned project artifacts and source changes. A team can recover the repository state associated with a commit and compare what changed.
+Git records repository state, source history, authorship metadata, and changes between revisions. It allows a team to recover the artifacts that existed at a commit and inspect what changed.
 
-Specification-Driven Development, or SDD, moves intended work out of an ephemeral prompt and into persistent artifacts. Current tools use different structures, but commonly produce some combination of requirements, design, plans, and implementation tasks. Kiro uses requirements, design, and task artifacts. GitHub Spec Kit uses specifications, plans, and tasks. OpenSpec represents changes through proposals, delta specifications, design, and tasks.
+Specification-Driven Development, or SDD, moves intended work out of an ephemeral conversation and into persistent artifacts. Current tools use different structures, but commonly produce some combination of requirements, design, implementation plans, and tasks. Kiro uses requirements, design, and task artifacts. GitHub Spec Kit uses specifications, plans, and tasks. OpenSpec represents changes through proposals, delta specifications, design, and tasks.
 
 This is an important engineering move:
 
@@ -127,9 +102,9 @@ Intent in a versioned specification
 
 [[M_EBG_A_03-1.png]]
 
-Agent observability is also advancing. Emerging telemetry conventions can record model requests, input and output messages, agent identity and version, conversation identifiers, token usage, retrieval data, and tool calls. These records help reconstruct technical execution and correlate activity across a workflow.
+Conversation history preserves visible interaction. Agent telemetry can preserve selected model requests, responses, tool calls, retrieval activity, token usage, and runtime identity. Tests and reviews preserve verification results. Audit logs can preserve authenticated events and changes to controlled resources.
 
-But each practice preserves a different layer:
+Each practice protects a useful layer:
 
 - Git preserves repository state and change history.
 - SDD preserves a structured statement of intended change.
@@ -137,149 +112,315 @@ But each practice preserves a different layer:
 - Telemetry preserves selected runtime events.
 - Tests and reviews preserve verification results.
 
-The governance gap appears between those layers.
-
-Git does not identify the complete context delivered to the agent. An SDD artifact does not prove which version entered a run. A transcript does not necessarily expose hidden instructions or context transformations. Telemetry may record a tool call without explaining which approved change scope authorized it. A passing test does not prove that every governing constraint was considered.
-
-The problem is no longer simply that information is missing. It is that the surviving records are not consistently bound into one versioned execution basis.
+These are real solutions. The remaining problem is not that they have no value. It is that they do not automatically form one governed execution basis.
 
 ---
 
-## From Conversation to a Versioned Execution Basis
+## 3. What Existing Solutions Still Cannot Resolve
 
-The payment retry request should not enter the workflow only as text in a chat box. It should become an identifiable Prompt Artifact connected to an explicit Context Manifest.
+Git can recover a file version, but it does not prove that the version entered the agent's context.
 
-The Prompt Artifact records the requested outcome, constraints, acceptance conditions, author, approval state, and version. It is not necessarily a copy of every conversational sentence. It is the governed instruction for the run.
+SDD prevents intended work from disappearing, but no single SDD format represents every relevant system viewpoint, and the existence of a specification does not prove which version governed a run.
 
-The Context Manifest identifies the external inputs and capabilities that formed the run's engineering conditions. Depending on risk, it can include:
+A conversation transcript can show visible messages without exposing hidden instructions, context assembly, retrieval results, permissions, or truncation. Telemetry can show a tool call without explaining which approved Scope authorized it. A passing test can show that configured checks passed without proving that every applicable system constraint was present.
+
+The records survive in separate layers:
 
 ```text
-Execution ID
-Prompt Artifact ID and version
-Change Scope ID and version
-Repository commit or workspace state
-Specification and architecture artifact versions
-Applicable instruction and policy versions
-Files and retrieved sources delivered to context
-Conversation or summary version
-Agent and model version
-Available tools and permissions
-Environment identity
-Context truncation or transformation events
-Start time, end time, and integrity metadata
+Specification
+Conversation
+Repository state
+Tool trace
+Test result
+Approval
 ```
 
-Large or sensitive content does not always need to be duplicated. The manifest can reference a controlled artifact by stable identifier, version, and integrity hash. Access rules and retention policies can determine who may inspect the content.
+But the organization still lacks a reliable answer to:
 
-This creates a stronger relationship:
+> Which versioned system state and bounded change state were actually supplied to this run, and what evidence supports that claim?
+
+This is the **Versioned Execution Basis Gap**.
+
+The missing relationship is not merely another document. It is a traceable binding among the governed request, relevant system state, approved change scope, effective context, execution identity, and resulting evidence.
+
+---
+
+## 4. Governance Scope and the Elements That Must Become Visible
+
+This article is limited to the software development stage.
+
+Its governance unit is **one identifiable AI-assisted development run**. Its governance object is the external engineering basis supplied to that run and the transformations applied to that basis while the run is active.
+
+It does not attempt to govern:
+
+- private model reasoning;
+- deployment or production operations;
+- every engineering decision made during the run;
+- the long-term business outcome of the resulting change.
+
+Individual engineering decisions inside the run remain separate Decision IDs governed through the Decision Behavior Engineering Elements and Evidence introduced in the previous article.
+
+For this governance problem, the required **Governance Engineering Elements** include:
+
+### Prompt Artifact
+
+A versioned representation of the governed request, including requested outcome, constraints, acceptance conditions, author, approval state, and integrity reference.
+
+### Context Manifest
+
+An identifiable manifest of the external instructions, artifacts, capabilities, and environmental conditions delivered to the run.
+
+### Execution ID
+
+A stable identity that binds the Prompt Artifact, Context Manifest, execution events, Decision IDs, resulting engineering artifacts, and verification evidence.
+
+### System Basis Reference
+
+A reference to the applicable version of the system state. In this series, VSS makes that state observable across PM/BA business analysis, system design, system architecture, and other required viewpoints.
+
+### Change Scope
+
+The approved boundary of the current change: what may be changed, what may be read, which interfaces and constraints apply, and what remains outside the task.
+
+### Context State and Transformation Events
+
+Evidence that identifies what was available, delivered, accessed, omitted, summarized, truncated, retrieved, or replaced during execution.
+
+### Execution Capability State
+
+The agent, model, tool, permission, environment, and instruction versions active for the run.
+
+[[M_EBG_A_03-2.png]]
+
+These elements establish a recoverable point-in-time basis:
 
 ```text
-Prompt Artifact
-    defines the governed request
+VSS Version
+    relevant system state
 
-Context Manifest
-    identifies the external execution conditions
+Scope Version
+    bounded change state
+
+Prompt Artifact Version
+    governed request
+
+Context Manifest Version
+    delivered execution conditions
 
 Execution ID
-    binds those conditions to actions and results
+    binding across actions, decisions, and evidence
 ```
 
-The result is not perfect reproducibility. Models, external services, and non-deterministic tools may still produce different outputs. The practical governance goal is **basis reproducibility**: the organization can recover the controlled inputs and conditions against which a run should be reviewed or repeated.
+They are infrastructure for governance. Their existence does not mean that governance has occurred.
 
 ---
 
-## Context Must Include the System and the Change
+## 5. Engineering the Execution Basis and Audit Mechanism
 
-A versioned prompt can still be incomplete if it describes only the requested feature.
+The engineering design begins before the agent executes.
 
-The payment retry change belongs to a larger system. Business rules define when another attempt is allowed. System design defines payment states and failure behavior. Architecture defines dependency and transaction boundaries. Security and operational rules may prohibit specific implementations.
+### Build the expected basis
 
-A change-level specification is useful because it bounds the current task. It does not automatically represent the system as a whole.
+VSS and Scope define what the run is expected to receive.
 
-This is where the later concepts in this series fit, without becoming the subject of this article:
+VSS provides the relevant system state across required viewpoints. Scope identifies the bounded part involved in the current change. Rules determine which viewpoints, constraints, artifacts, capabilities, and approvals are mandatory for this type of run.
 
-- **VSS** makes the relevant system specification observable across PM/BA, system design, system architecture, and other engineering viewpoints.
-- **Scope** identifies the bounded part of that system involved in the current change.
-- **Version** fixes both the system state and change boundary at the relevant point in time.
-- **TraceID or Execution ID** connects that basis to execution records and resulting evidence.
+```text
+VSS + Scope + Applicable Rules
+    -> Expected Execution Basis
+```
 
-For prompt and context governance, their immediate role is simple: the Context Manifest must be able to identify both the versioned system basis and the versioned change scope supplied to the run.
+### Capture the observed basis
 
-Without the system basis, the agent may satisfy the local request while violating an unchanged constraint. Without the change scope, the agent may interpret the entire repository as available for modification. Without versions, a later reviewer may inspect today's documents instead of the documents that governed the run at that time.
+The Prompt Artifact and Context Manifest must use stable identities and versions. Large or sensitive content can remain in controlled storage while the manifest records its stable identifier, version, integrity hash, and access classification.
 
----
+Context assembly should generate point-in-time evidence for:
 
-## Recording Context Is Not the Same as Governing It
+- artifact resolution and version selection;
+- instruction and rule delivery;
+- file and source delivery or access;
+- agent, model, tool, permission, and environment identity;
+- context summary, truncation, retrieval, or replacement;
+- start, end, and integrity metadata.
 
-Once context becomes observable, governance can finally perform concrete work.
+The result is not perfect output reproducibility. Models and external tools may remain non-deterministic. The practical goal is **basis reproducibility**: the organization can recover the controlled inputs and conditions against which the run should be reviewed or repeated.
 
-Before execution, controls can verify that required specification viewpoints are present, the Scope is approved, referenced versions exist, and the agent's permissions match the task.
+```text
+Context Manifest + Execution Evidence
+    -> Observed Execution Basis
+```
 
-During execution, monitoring can identify context truncation, unexpected retrieval, unauthorized file access, tool calls outside Scope, or a change in the model or instruction set.
+### Use Evidence to audit VSS and Scope
 
-After execution, reviewers can compare the delivered context with the actions taken, inspect test and review evidence, assess exceptions, and determine whether the result should be accepted.
+The Evidence model from the previous article provides the distinction required for a credible audit:
 
-Across many runs, the organization can identify recurring failures: architecture rules that are frequently omitted from context, prompts that produce excessive scope expansion, summaries that remove critical constraints, or approvals that occur after implementation has already begun.
+- `observed`: captured directly as an event or state;
+- `declared`: stated by a human or agent;
+- `derived`: inferred from identified evidence;
+- `verified`: independently checked against a rule or artifact.
 
-That is where PDCA becomes possible:
+A Context Manifest entry is execution evidence. When it is connected to a specific Decision ID and supports a claim about that decision's input basis, it also becomes relevant Engineering Decision Behavior Evidence.
+
+The audit mechanism compares the normative state with the observed state:
+
+```text
+Expected Execution Basis
+    VSS + Scope + Rules
+
+Observed Execution Basis
+    Context Manifest + Execution Evidence
+
+Audit
+    compare expected and observed states
+
+Audit Finding
+    compliant, missing, stale, out of scope, conflicting, or unknown
+```
+
+The comparison can determine whether a required viewpoint was missing, an obsolete specification was delivered, a context summary removed a constraint, a tool exceeded Scope, or an unapproved model or permission set was used.
+
+[[M_EBG_A_03-3.png]]
+
+### Infrastructure is not governance
+
+VSS, Scope, Prompt Artifacts, Context Manifests, Trace IDs, and Evidence do not approve or reject a run by themselves. They make the relevant states available for evaluation.
+
+An Audit Finding is also not automatically the final Governance Judgment. Governance still requires an applicable rule, an authorized role or control, an evaluation of evidence strength, and an action.
+
+```text
+Engineering
+    creates identifiable expected and observed states
+
+Evidence
+    supports claims about the observed state
+
+Audit
+    identifies correspondence or difference
+
+Governance
+    applies rules and authority to judge and act
+```
+
+For deterministic rules, an authorized control may automatically block a run when a mandatory context element is missing. For semantic or risk-based questions, the Audit Finding may require human review.
+
+This produces a repeatable governance loop:
 
 ```text
 Plan
-    Define required prompt, context, scope, and controls
+    Define the required VSS, Scope, context, evidence, and controls
 
 Do
     Execute under an identified and versioned basis
 
 Check
-    Compare actions and results with that basis
+    Audit Evidence against VSS, Scope, and Rules
 
 Act
-    Correct the workflow, controls, specifications, or context assembly
+    Accept, reject, correct, escalate, or improve the engineering controls
 ```
 
-Governance becomes repeatable because it no longer depends on someone remembering what the conversation meant.
-
-[[M_EBG_A_03-3.png]]
+This is what **Engineering Before Governance** means. Engineering creates the observable states and evidence infrastructure that governance needs. Evidence makes a judgment supportable. Audit turns comparison into a finding. Governance remains the separate act of authorized judgment and control.
 
 ---
 
-## Engineering Comes Before the Governance Judgment
+## 6. Example: Auditing a Payment Retry Development Change
 
-An organization may already have rules requiring authorized scope, architecture compliance, human approval, testing, traceability, or auditability.
+The payment retry request can now be represented as a governed development change rather than a remembered conversation. The example remains entirely inside the development stage: defining the change, assembling the development context, modifying code, and reviewing the result.
 
-Those governance requirements can exist on paper and still be impossible to apply to a concrete AI development run.
+```yaml
+development_change:
+  id: CHG-payment-retry-184
+  phase: development
+  trace_id: TRACE-payment-retry-184
+  prompt_artifact: PROMPT-payment-retry@v3
+  context_manifest: CTX-payment-184@v1
 
-If the prompt is transient, the governed request cannot be recovered reliably. If the context is invisible, the applicable execution conditions cannot be established. If inputs have no versions, the past state cannot be reconstructed. If the execution has no stable identity, actions and evidence cannot be bound back to that state.
+expected_development_basis:
+  vss: VSS-payment-system@v12
+  required_viewpoints:
+    - business-analysis
+    - system-design
+    - system-architecture
+  scope: SCOPE-payment-retry@v4
+  required_constraints:
+    - retry-temporary-failures-only
+    - maximum-one-retry
+    - preserve-idempotency
+    - preserve-public-api
+    - preserve-transaction-boundary
 
-The first step is therefore not to add another governance principle. It is to engineer the object that governance needs to observe.
+observed_development_basis:
+  prompt_artifact:
+    version: v3
+    status: verified
+    evidence: EVT-prompt-approval-031
+  delivered_viewpoints:
+    business-analysis:
+      version: v12
+      status: observed
+      evidence: EVT-context-delivery-101
+    system-design:
+      version: v12
+      status: observed
+      evidence: EVT-context-delivery-102
+    system-architecture:
+      status: not-captured
+  scope:
+    version: v4
+    status: observed
+    evidence: EVT-context-delivery-104
+  modified_artifacts:
+    - ref: src/payment/client.ts
+      status: observed
+      evidence: EVT-file-write-211
+    - ref: src/transaction/shared-boundary.ts
+      status: observed
+      evidence: EVT-file-write-212
 
-```text
-Prompt
-    from transient instruction to versioned Prompt Artifact
+audit:
+  findings:
+    - id: FINDING-CONTEXT-001
+      result: missing-required-basis
+      detail: System architecture viewpoint was not evidenced as delivered.
+    - id: FINDING-SCOPE-002
+      result: out-of-scope-change
+      detail: Shared transaction boundary was modified outside approved Scope.
 
-Context
-    from implicit model input to identifiable Context Manifest
-
-Execution
-    from isolated conversation to traceable engineering run
-
-Governance
-    from general policy to repeatable control, review, and improvement
+governance_judgment:
+  authority: human:payment-maintainer
+  decision: reject-development-change
+  evidence_strength: sufficient
+  actions:
+    - mark the current development change as not acceptable
+    - restore the out-of-scope artifact
+    - add the approved architecture viewpoint to the development context
+    - rebuild the Context Manifest
+    - repeat implementation and review under a new Development Change ID
 ```
 
-SDD helps by preventing intended work from disappearing with the conversation. Git helps preserve versions of the artifacts that exist. VSS and Scope can identify the relevant system state and bounded change. Execution identity can connect that basis to what happened next.
+The Prompt Artifact did not govern the development change. The Context Manifest did not govern the development change. The Evidence did not govern the development change.
 
-But this progression exposes a further problem.
+Together, they allowed Audit to compare the VSS-and-Scope expectation with the observed development basis. The findings then allowed an authorized maintainer to make a supportable Governance Judgment about the change and require corrective action before the code could be accepted.
 
-Even when a run is traceable, not every retained record proves the same thing. A prompt, context manifest, tool trace, Git commit, test result, approval, and token report each support different governance claims.
+The same Trace ID can connect this development change to individual Decision IDs. For example, the decision to retry once can reference `CODE-DEC-042`, while its Decision Behavior Evidence references the Prompt Artifact, Context Manifest, applicable constraints, selection event, and realized code artifact.
 
-The next question is therefore not simply whether the organization has evidence.
+The relationship is now explicit:
 
-It is:
+```text
+VSS and Scope
+    define what should be true
 
-> What kind of evidence supports which engineering governance problem, and what can that evidence actually prove?
+Development Evidence
+    shows what can be demonstrated during the change
 
-That is where traceability must become Engineering Decision Behavior Evidence.
+Audit
+    identifies the difference
+
+Governance Judgment
+    determines what must happen next
+```
+
+Engineering comes first because governance cannot compare, judge, or improve what engineering has not made visible.
 
 ---
 
@@ -292,4 +433,7 @@ That is where traceability must become Engineering Decision Behavior Evidence.
 - [OpenSpec: Spec-driven schema](https://openspec.dev/docs/schemas/spec-driven)
 - [OpenSpec: Quickstart and archive model](https://openspec.dev/docs/quickstart)
 - [OpenTelemetry: Generative AI semantic conventions](https://opentelemetry.io/docs/specs/semconv/gen-ai/)
+- [W3C PROV-O: The PROV Ontology](https://www.w3.org/TR/prov-o/)
+- [Decision Provenance: Harnessing Data Flow for Accountable Systems](https://www.repository.cam.ac.uk/items/14c68264-4c52-41d9-bf37-1dccc966cdcb)
+- [NIST: Assurance Case](https://csrc.nist.gov/glossary/term/assurance_case)
 - [NIST AI Risk Management Framework Core](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/)
