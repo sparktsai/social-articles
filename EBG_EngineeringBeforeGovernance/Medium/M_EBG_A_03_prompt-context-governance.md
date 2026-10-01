@@ -2,7 +2,7 @@
 
 ## Prompts and context are execution inputs, but most teams still treat them as disposable conversation
 
-[[M_EBG_A_02-0.png]]
+[[M_EBG_A_03-0.png]]
 
 An engineer asks an AI agent to change the retry behavior of a payment service.
 
@@ -101,7 +101,7 @@ An execution record may prove that a versioned instruction was delivered. A tool
 
 That boundary is important. Prompt and context governance should produce inspectable engineering evidence, not a fictional reconstruction of an AI's mind.
 
-[[M_EBG_A_02-2.png]]
+[[M_EBG_A_03-2.png]]
 
 ---
 
@@ -125,7 +125,7 @@ Intent in a versioned specification
     -> recorded intent remains inspectable
 ```
 
-[[M_EBG_A_02-1.png]]
+[[M_EBG_A_03-1.png]]
 
 Agent observability is also advancing. Emerging telemetry conventions can record model requests, input and output messages, agent identity and version, conversation identifiers, token usage, retrieval data, and tool calls. These records help reconstruct technical execution and correlate activity across a workflow.
 
@@ -239,7 +239,7 @@ Act
 
 Governance becomes repeatable because it no longer depends on someone remembering what the conversation meant.
 
-[[M_EBG_A_02-3.png]]
+[[M_EBG_A_03-3.png]]
 
 ---
 
