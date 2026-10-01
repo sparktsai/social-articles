@@ -437,3 +437,12 @@ Engineering comes first because governance cannot compare, judge, or improve wha
 - [Decision Provenance: Harnessing Data Flow for Accountable Systems](https://www.repository.cam.ac.uk/items/14c68264-4c52-41d9-bf37-1dccc966cdcb)
 - [NIST: Assurance Case](https://csrc.nist.gov/glossary/term/assurance_case)
 - [NIST AI Risk Management Framework Core](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/)
+
+### Related Work by the Author
+
+- [Spark Tsai, *Ghost Intent: An Effect of Traceability Collapse in GenAI-Assisted SDLCs*](https://doi.org/10.5281/zenodo.18872540)
+- [Spark Tsai, *Engineering Determinacy: Structuring Established Knowledge So That It Need Not Be Reinterpreted*](https://doi.org/10.5281/zenodo.22718019)
+- [Spark Tsai, *Viewpoint-Structured Specification (VSS)*](https://doi.org/10.31224/6612)
+- [Spark Tsai, *Scope as a Governance Primitive: Making Inference, Authority, Effect, and Evidence Explicit in AI Governance*](https://doi.org/10.5281/zenodo.22108234)
+- [Spark Tsai, *Decision Analysis: Effect-Oriented Structural Scope Audit for AI-Assisted Software Development*](https://doi.org/10.31224/6616)
+- Spark Tsai, *Engineering Before Governance: Why AI Governance Depends on Engineering-Visible State*, working paper v0.2, 2026.
