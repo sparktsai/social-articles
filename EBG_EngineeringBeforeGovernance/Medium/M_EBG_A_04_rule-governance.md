@@ -2,6 +2,8 @@
 
 ## A rule can exist in the repository, appear in the final explanation, and still have had no observable effect on the decision.
 
+[[M_EBG_A_04-0.png]]
+
 An engineering team has a clear rule for payment retry changes:
 
 > A retry implementation MUST preserve the existing idempotency key.
@@ -71,6 +73,8 @@ Governed
 ```
 
 Seen this way, the issue is not mainly whether the rule was written well. The issue is whether its path through the decision can be observed.
+
+[[M_EBG_A_04-1.png]]
 
 ---
 
@@ -181,6 +185,8 @@ The Rule ID must connect to VSS, Scope, Prompt Artifact, Context Manifest, Devel
 
 None of this requires one universal file format. What matters is that the meanings stay stable and the relationships can be followed.
 
+[[M_EBG_A_04-2.png]]
+
 ---
 
 ## 5. Engineering Design: From Rule Asset to Governance Judgment
@@ -249,6 +255,8 @@ Article 04 asks which rule applied and what the evidence supports
 ```
 
 Together they create governance infrastructure. Governance occurs only when an authorized process uses that infrastructure to judge and act.
+
+[[M_EBG_A_04-3.png]]
 
 ---
 
