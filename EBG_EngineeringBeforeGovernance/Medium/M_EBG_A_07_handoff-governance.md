@@ -2,6 +2,8 @@
 
 ## Three development handoffs expose a gap between workflow control and accountable human work.
 
+[[M_EBG_A_07-0.png]]
+
 An engineer asks an AI agent to change the retry behavior of a payment client. The agent hands a design to a coding agent. The coding agent changes the code and sends a pull request to a human reviewer.
 
 The ticket, code, and summary all arrive. But did the engineer give the first agent enough context and bounded authority? Did the next agent receive only what it needs, without inheriting a role or responsibility by default? And can the human reviewer actually perform the assigned review with the information provided?
@@ -33,6 +35,8 @@ But a transfer event alone does not answer:
 An output can be correct and still be hard to continue safely. A vague task can expand an agent's authority by inference; a broad history can pass stale context to another agent; an unresolved risk can lose its owner. At the human end, a code diff supports code review, but not necessarily an audit of why the design was chosen or whether its residual risk is acceptable. The review a person can perform is bounded by what the handoff provides.
 
 This is a governance gap, not merely a workflow defect. A workflow may successfully route a task, record that an agent completed it, and pause for a human. Yet none of those events shows that the next actor had the information, authority, and capacity required for the responsibility assigned. The process can look orderly while accountability becomes thinner at each transition.
+
+[[M_EBG_A_07-1.png]]
 
 ---
 
@@ -82,6 +86,8 @@ A broad history can pass stale, irrelevant, or sensitive context; a short summar
 ### A2H: Is the human's responsibility clear, and is the response sufficient?
 
 HITL identifies where a person appears; governance must define what they are expected and authorized to judge. A diff may support code review against a requirement. To audit decision risk, the response must also provide the Decision Analysis, alternatives, assumptions, Impact Analysis, risk, and supporting Evidence. Otherwise, “approve” asks the human to decide more than the handoff lets them inspect. In every direction, the record should show what was sent and received, what changed, and who owns what remains open.
+
+[[M_EBG_A_07-2.png]]
 
 ---
 
@@ -198,6 +204,8 @@ handoff_chain:
     known_limitation: "Agent did not determine whether residual business risk is acceptable"
     unresolved_owner: engineer-17
 ```
+
+[[M_EBG_A_07-3.png]]
 
 The first transfer gives the agent a bounded analysis task and leaves unresolved business questions with the engineer.
 
