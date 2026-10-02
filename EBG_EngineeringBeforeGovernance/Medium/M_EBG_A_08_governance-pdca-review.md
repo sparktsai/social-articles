@@ -2,6 +2,8 @@
 
 ## From decision evidence to traceable, reviewable development practice
 
+**Engineering Before Governance | 08 / 08**
+
 [[M_EBG_A_08-0.png]]
 
 AI governance policies can set important expectations. But when we bring those expectations into software development, a practical question appears: what should an engineer build so that the organization can tell whether the policy was followed?

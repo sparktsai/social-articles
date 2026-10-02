@@ -2,6 +2,8 @@
 
 ## A visible prompt is not the complete development basis, and a surviving code change does not prove what the agent received.
 
+**Engineering Before Governance | 04 / 08**
+
 [[M_EBG_A_04-0.png]]
 
 An engineer asks an AI agent to change the retry behavior of a payment service:

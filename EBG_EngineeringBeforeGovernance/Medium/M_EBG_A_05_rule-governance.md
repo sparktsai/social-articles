@@ -2,6 +2,8 @@
 
 ## A rule can exist in the repository, appear in the final explanation, and still have had no observable effect on the decision.
 
+**Engineering Before Governance | 05 / 08**
+
 [[M_EBG_A_05-0.png]]
 
 An engineering team has a clear rule for payment retry changes:

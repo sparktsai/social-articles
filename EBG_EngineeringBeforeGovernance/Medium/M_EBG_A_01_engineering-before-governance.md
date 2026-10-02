@@ -2,6 +2,8 @@
 
 ## Engineering Before Governance: Why AI Governance Depends on Engineering-Visible State
 
+**Engineering Before Governance | 01 / 08**
+
 [[M_EBG_A_01-0.png]]
 
 In the final months of 2025, AI governance was being discussed across organizations, enterprises, governments, and technical communities. Organizations looked to standards such as ISO/IEC 42001 and AI management systems. Enterprises developed policies and SOPs. The topics ranged across responsible AI, data governance, ethics, security, runtime controls, and the growing use of agents in business and software development.

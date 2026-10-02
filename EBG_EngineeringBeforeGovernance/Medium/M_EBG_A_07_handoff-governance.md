@@ -2,6 +2,8 @@
 
 ## Three development handoffs expose a gap between workflow control and accountable human work.
 
+**Engineering Before Governance | 07 / 08**
+
 [[M_EBG_A_07-0.png]]
 
 An engineer asks an AI agent to change the retry behavior of a payment client. The agent hands a design to a coding agent. The coding agent changes the code and sends a pull request to a human reviewer.

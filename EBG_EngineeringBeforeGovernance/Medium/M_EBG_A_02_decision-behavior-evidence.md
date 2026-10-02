@@ -2,6 +2,8 @@
 
 ## Most decision records explain what happened afterward. They do not show what was visible when the choice was made.
 
+**Engineering Before Governance | 02 / 08**
+
 [[M_EBG_A_02-0.png]]
 
 An AI agent is asked to change the retry behavior of a payment client.

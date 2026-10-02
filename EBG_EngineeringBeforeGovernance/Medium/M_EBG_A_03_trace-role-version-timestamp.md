@@ -2,6 +2,8 @@
 
 ## Give each element a traceable identity, then connect its changing state to the rest of the engineering chain.
 
+**Engineering Before Governance | 03 / 08**
+
 [[M_EBG_A_03-0.png]]
 
 An AI agent is asked to change the retry behavior of a payment client.

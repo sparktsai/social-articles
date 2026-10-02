@@ -2,6 +2,8 @@
 
 ## A red cell in a risk matrix does not show which development decision created the risk, what evidence supports it, or whether a control actually reduced it.
 
+**Engineering Before Governance | 06 / 08**
+
 [[M_EBG_A_06-0.png]]
 
 An AI agent changes the retry behavior of a payment client.
