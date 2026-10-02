@@ -15,6 +15,17 @@
 - [From Peer Inspection to AI-Generated Change Review: How Code Review Evolved](HR_HistoryReview/X/X_HR_A_02_code-review-to-ai-generated-change-review.md)
 - [From Requirements Documents to AI Context: How Document-Driven Development Evolved](HR_HistoryReview/X/X_HR_A_03_document-driven-development.md)
 
+## Behavior Rule Architecture
+
+### Medium
+
+- [When Did You Start Designing Rules for AI?](BRA_BehaviorRuleArchitecture/Medium/M_BRA_A_01_designing-rules-for-ai.md)
+- [What Is a Rule?](BRA_BehaviorRuleArchitecture/Medium/M_BRA_A_02_what-is-a-rule.md)
+- [When Does a Collection of Rules Become an Architecture?](BRA_BehaviorRuleArchitecture/Medium/M_BRA_A_03_rules-to-architecture.md)
+- [How Do You Actually Use a Behavior Rule Architecture?](BRA_BehaviorRuleArchitecture/Medium/M_BRA_A_04_using-behavior-rule-architecture.md)
+- [How Do You Know the AI Actually Followed the Rule?](BRA_BehaviorRuleArchitecture/Medium/M_BRA_A_05_verifying-ai-rule-following.md)
+- [What If Rule Libraries Could Be Shared?](BRA_BehaviorRuleArchitecture/Medium/M_BRA_A_06_shared-rule-libraries.md)
+
 ## Trace ID
 
 ### X
