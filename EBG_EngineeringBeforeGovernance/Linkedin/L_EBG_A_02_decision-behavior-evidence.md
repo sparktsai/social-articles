@@ -26,6 +26,8 @@ Architecture Decision Records are valuable for preserving a choice and its conse
 
 ## Capture five observable parts of the decision
 
+[[L_EBG_A_02-1.png]]
+
 **The context actually supplied.** Record the versioned sections or chunks delivered to the model. A hundred-page specification in the repository is different from the three sections included in context.
 
 **Alternatives that actually appeared.** Retain candidate options when they are observable in generated output or workflow events. When none appeared, leave that fact visible.
@@ -65,6 +67,8 @@ This is the role of the Evidence Skill that motivated the original article: pres
 Recording everything indiscriminately creates another search problem. Capture the information needed for the judgment, with controlled storage for sensitive material and resolvable references in the evidence record.
 
 ## What governance does with the record
+
+[[L_EBG_A_02-3.png]]
 
 Evidence provides a basis for inspection. Audit evaluates the claims it can support. An authorized role then accepts, corrects, returns, or escalates the work.
 

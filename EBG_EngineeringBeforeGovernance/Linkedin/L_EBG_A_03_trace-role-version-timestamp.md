@@ -26,6 +26,8 @@ Development governance needs those identifiers to connect to meaningful engineer
 
 ## Give each governed element an identity
 
+[[L_EBG_A_03-1.png]]
+
 A **Traceability Engineering Element** combines a stable identity, the relevant state, and explicit relationships to other identified elements. Evidence supports relationships when they make claims about what occurred.
 
 Use the smallest unit that someone needs to inspect, compare, correct, or hand off independently.

@@ -40,6 +40,8 @@ These distinctions make it possible to report artifact compliance and a process 
 
 ## Engineer the rule before auditing its application
 
+[[L_EBG_A_05-1.png]]
+
 Start with an atomic obligation or prohibition:
 
 > Payment retry implementation MUST preserve the existing idempotency key for every retry attempt.
@@ -53,6 +55,8 @@ Then define the evidence expectation. Delivery evidence supports that the rule r
 A conflict or exception also needs an authority path. If compatibility and security requirements conflict, the record must identify who may resolve that conflict and what effective rule set follows. A resolution left only in chat can disappear from the basis of later work.
 
 ## One payment change can support two conclusions
+
+[[L_EBG_A_05-2.png]]
 
 Consider a retry change with the following evidence:
 

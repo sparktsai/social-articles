@@ -28,6 +28,8 @@ For an AI-assisted payment retry change, that connection might include the appro
 
 ## Two dependencies worth designing explicitly
 
+[[L_EBG_A_01-1.png]]
+
 The first is **visibility**. A governance judgment needs a subject and state that someone can inspect. A link to today's specification cannot establish which specification version informed yesterday's decision.
 
 The second is **operationalization**. Someone must translate the requirement into a capture and review mechanism. Where is the rule selected? When is the scope approved? How is context delivery recorded? What happens when the evidence is insufficient?
@@ -37,6 +39,8 @@ Neither dependency requires access to private model reasoning. Both require the 
 This series focuses on decision behavior during AI-assisted software development: requirements, design, generation, verification, and handoff. The question is how to make that work inspectable enough for a responsible authority to decide whether it may continue.
 
 ## Start with the judgment you need to make
+
+[[L_EBG_A_01-2.png]]
 
 Consider the requirement: "The agent must stay within the approved payment retry scope."
 

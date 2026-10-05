@@ -26,6 +26,8 @@ The missing connection is which versions and conditions came together in this pa
 
 ## Distinguish available information from delivered information
 
+[[L_EBG_A_04-1.png]]
+
 A document in the repository was **available**. A tool log may show that a file was **accessed**. A context assembly record can show what was **delivered**. A final summary may **claim** that a constraint influenced the result.
 
 Those are separate claims with different evidence.
@@ -39,6 +41,8 @@ The manifest should identify the state that can actually be established. If the 
 **What the run should receive.** Preserve a versioned Prompt Artifact, the approved Change Scope, and references to the required system views and rules.
 
 In this series, **Viewpoint-Structured Specification (VSS)** represents system knowledge through relevant viewpoints such as business analysis, system design, and architecture. Scope selects the bounded modification and its exclusions.
+
+[[L_EBG_A_04-2.png]]
 
 **What the run actually received.** A Context Manifest identifies delivered instructions, specification fragments, source states, tool capabilities, permissions, and relevant environment conditions. Capture summarization, retrieval, omission, or truncation when observable.
 

@@ -26,6 +26,8 @@ Tickets, prompts, protocols, checkpoints, and pull requests support routing and 
 
 **Human to agent (H2A).** The agent needs the actual instruction, delivered context, expected outcome, approved Scope, applicable rules, exclusions, and escalation conditions. A human asking for analysis should make clear whether editing code is authorized.
 
+[[L_EBG_A_07-1.png]]
+
 **Agent to agent (A2A).** The receiving agent needs relevant payload, source references, an assigned role, and a clear separation between established decisions and unresolved assumptions. Access to an analyst's output does not grant the coding agent the analyst's role or authority to accept risk.
 
 **Agent to human (A2H).** The human needs a specific duty and material that supports it. Code review needs the diff, requirements, scope, rules, and verification. Decision-risk review may also need alternatives, assumptions, Decision Analysis, Impact Analysis, controls, and residual risk.

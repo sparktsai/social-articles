@@ -24,6 +24,8 @@ The code may still pass focused tests. That leaves a separate question about its
 
 ## Use three analyses for three questions
 
+[[L_EBG_A_06-1.png]]
+
 **Decision Analysis** compares the generated effect with the approved Scope. What changed? Did an unsupported or unauthorized effect appear? Can that effect be traced to the recorded decision basis?
 
 **Impact Analysis** follows the affected engineering chain. A Requirements Traceability Matrix (RTM) connects requirements to design, code, tests, and verification. System-view and dependency relationships can extend the analysis to interfaces and architecture boundaries.
@@ -45,6 +47,8 @@ Observed decision condition
 ```
 
 ## Match the control to the condition
+
+[[L_EBG_A_06-3.png]]
 
 For the payment retry example, suppose the generated diff crosses the approved transaction boundary and required architecture delivery is unproven.
 
