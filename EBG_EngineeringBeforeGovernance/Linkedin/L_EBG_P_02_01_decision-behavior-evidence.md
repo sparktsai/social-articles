@@ -1,21 +1,11 @@
-"The AI explained its choice, so we can review the decision."
+The AI explains why it chose a solution. How do you know the explanation reflects what happened?
 
-"The explanation is clear, but we still need to verify what happened."
+Its summary lists alternatives and cites a Rule. But those details may have been added afterward, while the context and decision events were never captured.
 
-Both belong in an AI-assisted review. They serve different purposes.
+If you were facing this, what would you do?
 
-A final summary may say the agent considered three alternatives and followed an idempotency rule. Were those alternatives captured during generation? Was that rule delivered before selection? What connects the choice to the resulting code?
+This article examines how Development Evidence can preserve observable decision behavior and the limits of what a record can support.
 
-Article 02 examines the difference between a decision story and Development Evidence.
+Read: [The AI Explained Its Decision. What Can You Actually Verify?](L_EBG_A_02_decision-behavior-evidence.md)
 
-Using a payment retry example, it shows what to retain: context actually supplied, alternatives when they appear, observable rule application, the selected decision, and the generated artifact. It also shows how to keep evidence, claims, and unknowns separate.
-
-A required "alternatives considered" field should never become a reason to invent alternatives afterward.
-
-Which sentence in your latest AI decision summary could you trace back to a captured event?
-
-Read the article: [The AI Explained Its Decision. What Can You Actually Verify?](L_EBG_A_02_decision-behavior-evidence.md)
-
-Engineering Before Governance | 02 / 08
-
-#AIGovernance #DecisionEvidence #SoftwareEngineering
+#EngineeringBeforeGovernance #AIGovernance #DecisionEvidence #SoftwareEngineering

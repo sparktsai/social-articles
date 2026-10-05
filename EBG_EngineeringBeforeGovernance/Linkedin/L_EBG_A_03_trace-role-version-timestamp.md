@@ -91,3 +91,5 @@ The practical test is simple: pick one approved AI-generated change and follow i
 - [W3C PROV-O](https://www.w3.org/TR/prov-o/)
 - [W3C Trace Context](https://www.w3.org/TR/trace-context/)
 - [Spark Tsai: Anchor Architecture](https://doi.org/10.31224/6580)
+
+#EngineeringBeforeGovernance #Traceability #AIGovernance #SoftwareEngineering

@@ -81,3 +81,5 @@ Before approving the next AI-generated decision summary, choose one sentence tha
 - [W3C PROV Overview](https://www.w3.org/TR/prov-overview/)
 - [Using Architectural Decision Records](https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/introduction.html)
 - [Spark Tsai: Toward Decision Behavior Governance](https://doi.org/10.5281/zenodo.18876165)
+
+#EngineeringBeforeGovernance #AIGovernance #DecisionEvidence #SoftwareEngineering

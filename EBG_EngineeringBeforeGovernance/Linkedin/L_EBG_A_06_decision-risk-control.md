@@ -90,3 +90,5 @@ The next time a change receives a high-risk label, ask for its observable condit
 - [NASA: Requirements Management](https://www.nasa.gov/reference/6-2-requirements-management/)
 - [Spark Tsai: Decision Risk](https://doi.org/10.5281/zenodo.19025533)
 - [Spark Tsai: Decision Analysis](https://doi.org/10.31224/6616)
+
+#EngineeringBeforeGovernance #DecisionRisk #AIGovernance #SoftwareEngineering

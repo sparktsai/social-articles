@@ -73,3 +73,5 @@ Review your next approval checkpoint by asking what the recipient must judge and
 - [W3C PROV Overview](https://www.w3.org/TR/prov-overview/)
 - [NIST AI RMF Playbook](https://airc.nist.gov/airmf-resources/playbook/)
 - [Spark Tsai: Beyond HITL](https://doi.org/10.5281/zenodo.21856291)
+
+#EngineeringBeforeGovernance #HumanOversight #AgentWorkflows #AIGovernance

@@ -90,3 +90,5 @@ The answers make the review more precise and the follow-up more useful.
 - [RFC 2119: Requirement Levels](https://www.rfc-editor.org/info/rfc2119/)
 - [Spark Tsai: Behavior Rule Architecture](https://doi.org/10.31224/6681)
 - [Spark Tsai: Toward Decision Behavior Governance](https://doi.org/10.5281/zenodo.18876165)
+
+#EngineeringBeforeGovernance #AIGovernance #BehaviorRules #SoftwareEngineering

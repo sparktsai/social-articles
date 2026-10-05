@@ -1,21 +1,11 @@
-If an AI review fails, how will you show that the next change was governed better?
+An AI-assisted change failed review. How will you know the process improved?
 
-A revised policy records new expectations. An extra approval adds a checkpoint.
+The team updates its policy and adds a checkpoint. Without connecting the original finding to a control and evidence from later work, improvement remains difficult to establish.
 
-Evidence from later work shows whether the corrective control became effective practice.
+If you were facing this, what would you do?
 
-The final article of Engineering Before Governance connects the series into a Plan, Do, Check, Act loop.
+This article brings evidence, traceability, context, Rules, risk, and handoffs together in a repeatable governance PDCA loop.
 
-It starts with decision evidence and traceability, then applies them to context, rules, risk, and handoffs. The payment example follows a finding through corrective engineering work and asks what subsequent changes must show before the team can claim improvement.
+Read: [Your AI Policy Requires Oversight. How Will You Know It Improved?](L_EBG_A_08_governance-pdca-review.md)
 
-That gives policy enforcement, authorization, oversight, accountability, and audit concrete subjects to inspect.
-
-The practical starting point is one consequential change and one policy requirement: define the judgment, preserve the evidence, record the response, and inspect its effect in later work.
-
-Which recurring AI-development issue would you use to test that loop in your team?
-
-Read the article: [Your AI Policy Requires Oversight. How Will You Know It Improved?](L_EBG_A_08_governance-pdca-review.md)
-
-Engineering Before Governance | 08 / 08
-
-#AIGovernance #ContinuousImprovement #SoftwareEngineering
+#EngineeringBeforeGovernance #AIGovernance #ContinuousImprovement #SoftwareEngineering

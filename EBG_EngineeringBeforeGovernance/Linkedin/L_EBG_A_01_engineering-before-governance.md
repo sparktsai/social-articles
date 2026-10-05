@@ -88,3 +88,5 @@ That is a concrete place to begin.
 - [ISO/IEC 42001: AI management systems](https://www.iso.org/standard/42001)
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
 - [NIST Secure Software Development Framework](https://csrc.nist.gov/projects/ssdf)
+
+#EngineeringBeforeGovernance #AIGovernance #SoftwareEngineering #AIEngineering

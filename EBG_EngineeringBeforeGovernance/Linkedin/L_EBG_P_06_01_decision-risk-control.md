@@ -1,23 +1,11 @@
-If an AI-generated change is rated "high risk," how do you decide what control to apply?
+Your AI change is rated "high risk." What exactly should you control?
 
-Missing architecture context, an out-of-scope modification, and an unverified rule invocation are different conditions. Adding another approval does not tell you which one was treated.
+The concern could come from missing context, an unauthorized effect, or an unresolved dependency. Another approval does not tell you which condition was treated or what uncertainty remains.
 
-Article 06 turns the risk label into an engineering question: what observable condition creates the exposure, what could it affect, and what evidence would show that a control addressed it?
+If you were facing this, what would you do?
 
-It connects three analyses through a payment retry example:
+This article connects Decision Analysis, Impact Analysis, and Decision Risk to targeted controls and evidence of their results.
 
-- Decision Analysis compares the generated effect with approved Scope.
-- Impact Analysis follows affected requirements, designs, code, tests, and dependencies.
-- Decision Risk connects those findings to treatment and residual uncertainty.
+Read: [Your AI Change Is "High Risk." What Exactly Should You Control?](L_EBG_A_06_decision-risk-control.md)
 
-The article then distinguishes preventive, detective, and corrective controls, with evidence for each result.
-
-A completed action is only part of risk closure. The remaining condition and uncertainty still need review.
-
-For your latest high-risk change, what evidence supports the claim that its identified risk was reduced?
-
-Read the article: [Your AI Change Is "High Risk." What Exactly Should You Control?](L_EBG_A_06_decision-risk-control.md)
-
-Engineering Before Governance | 06 / 08
-
-#DecisionRisk #AIGovernance #SoftwareEngineering
+#EngineeringBeforeGovernance #DecisionRisk #AIGovernance #SoftwareEngineering

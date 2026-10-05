@@ -1,21 +1,11 @@
-Your team saved the prompt and the code.
+You saved the prompt and code. Can you recover what the AI actually received?
 
-Two weeks later, nobody can establish which architecture specification the agent actually received.
+The specification exists, but its delivered version is unknown. Retrieved fragments and conversation summaries may have changed the context. The resulting code survives while part of its development basis disappears.
 
-The records survived. Part of the development basis became untraceable.
+If you were facing this, what would you do?
 
-The same visible prompt can run with different source versions, retrieved fragments, instructions, permissions, or conversation summaries. A file in the repository does not establish that it reached the model.
+This article explores how a versioned development basis and Context Manifest make the conditions of an AI-assisted change inspectable.
 
-Article 04 shows how to connect an approved development basis to the observed run through a versioned Prompt Artifact, Change Scope, system-view references, and a Context Manifest.
+Read: [Same Prompt. Different Context. Which AI Change Can You Defend?](L_EBG_A_04_prompt-context-governance.md)
 
-The payment retry example reveals two separate findings: required architecture delivery is unproven, and the generated diff modifies an artifact outside Scope. Each gives the responsible maintainer a concrete basis for action.
-
-The goal is to recover the inputs and conditions for review. Identical regenerated output is a separate question.
-
-What part of your agents' effective context can your team currently establish after the session ends?
-
-Read the article: [Same Prompt. Different Context. Which AI Change Can You Defend?](L_EBG_A_04_prompt-context-governance.md)
-
-Engineering Before Governance | 04 / 08
-
-#ContextEngineering #AIGovernance #AIEngineering
+#EngineeringBeforeGovernance #ContextEngineering #AIGovernance #AIEngineering

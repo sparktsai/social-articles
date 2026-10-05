@@ -82,3 +82,5 @@ This makes a missing constraint or unexpected permission a finding that someone 
 - [W3C PROV-O](https://www.w3.org/TR/prov-o/)
 - [Spark Tsai: Viewpoint-Structured Specification](https://doi.org/10.31224/6612)
 - [Spark Tsai: Ghost Intent](https://doi.org/10.5281/zenodo.18872540)
+
+#EngineeringBeforeGovernance #ContextEngineering #AIGovernance #AIEngineering
