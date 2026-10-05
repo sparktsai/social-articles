@@ -2,6 +2,8 @@
 
 ### From prompt-selected Rulesets to Rule Libraries, Skills, and CLI
 
+[[L_BRA_A_04-0.png]]
+
 In the previous parts of this series, the problem gradually changed.
 
 First, I moved repeated behavioral instructions out of individual prompts.
@@ -254,7 +256,7 @@ In other words:
 
 > **Governance information could be preserved without requiring all governance information to participate in every LLM inference.**
 
-[[PNG]]
+[[L_BRA_A_04-1.png]]
 
 This also changed the role of the repository.
 
@@ -779,7 +781,7 @@ The CLI does not need to understand every development workflow.
 
 And governance information does not have to be sent to the LLM merely because it needs to be preserved.
 
-[[PNG]]
+[[L_BRA_A_04-2.png]]
 
 ---
 
@@ -894,3 +896,5 @@ That is where the next part begins:
 > **LBRA-E — Did the AI Actually Follow the Rule?**
 
 From behavioral Rules to decision evidence, evaluation, and PDCA.
+
+#BehaviorRuleArchitecture #AIEngineering #DeveloperTools #CodingAgents

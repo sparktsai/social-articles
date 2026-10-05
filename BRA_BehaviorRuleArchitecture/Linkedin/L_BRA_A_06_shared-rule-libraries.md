@@ -2,6 +2,8 @@
 
 ### A small thought experiment about reusable engineering rules
 
+[[L_BRA_A_06-0.png]]
+
 While building BRA, I originally thought of the Rule Library as something that could be shared.
 
 The idea was simple.
@@ -74,7 +76,7 @@ I am more interested in this possibility:
 
 Category becomes a way to organize and discover Rules, not necessarily a rigid hierarchy.
 
-[[PNG]]
+[[L_BRA_A_06-1.png]]
 
 ## Then I thought about existing engineering guides
 
@@ -208,8 +210,10 @@ Maybe the interesting future is not one giant universal Rule Library.
 
 Maybe it is many independently maintained Rule Libraries, representing different kinds of engineering knowledge, that developers and organizations can discover, adapt, and use.
 
-[[PNG]]
+[[L_BRA_A_06-2.png]]
 
 And perhaps we already have much more of that knowledge than we think.
 
 It may just not be represented as AI behavioral Rules yet.
+
+#BehaviorRuleArchitecture #KnowledgeSharing #AIEngineering #SoftwareEngineering

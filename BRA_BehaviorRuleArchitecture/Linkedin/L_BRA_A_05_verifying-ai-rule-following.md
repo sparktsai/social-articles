@@ -2,6 +2,8 @@
 
 ### From reusable Rules to observable decision behavior, risk-triggered review, and Rule PDCA
 
+[[L_BRA_A_05-0.png]]
+
 After using behavioral Rules in actual AI-assisted software development, the initial results looked promising.
 
 The same Rules could be reused across development tasks.
@@ -333,7 +335,7 @@ Governance cannot reliably inspect information that the engineering process neve
 
 Before deciding whether behavior is acceptable, the behavior first has to become visible.
 
-[[PNG]]
+[[L_BRA_A_05-1.png]]
 
 ---
 
@@ -1007,7 +1009,7 @@ Without Rule Revision:
 
 Only when these pieces connect does the system begin to support continuous Rule governance.
 
-[[PNG]]
+[[L_BRA_A_05-2.png]]
 
 ---
 
@@ -1154,3 +1156,5 @@ That was the point where the Rule stopped being only a reusable AI constraint.
 It became an engineering asset that could be observed, evaluated, corrected, and improved through actual development experience.
 
 And that was the point where **development Rule PDCA** became real.
+
+#BehaviorRuleArchitecture #AIGovernance #DecisionEvidence #ContinuousImprovement

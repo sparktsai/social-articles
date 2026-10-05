@@ -2,6 +2,8 @@
 
 ### From an atomic Rule to schema, governance, classification, and composition
 
+[[L_BRA_A_03-0.png]]
+
 In LBRA-02, I asked a basic question:
 
 > **What exactly is a Rule?**
@@ -377,7 +379,7 @@ The architecture could evolve without becoming structurally arbitrary.
 
 And validation still had a clear boundary.
 
-[[PNG]]
+[[L_BRA_A_03-1.png]]
 
 It could answer:
 
@@ -739,7 +741,7 @@ The architecture emerged by deciding:
 
 That distinction became more important than any individual schema field.
 
-[[PNG]]
+[[L_BRA_A_03-2.png]]
 
 ---
 
@@ -898,3 +900,5 @@ They were software infrastructure problems.
 That is where LBRA moves next:
 
 > **LBRA-04 — When the Architecture Became Infrastructure**
+
+#BehaviorRuleArchitecture #SoftwareArchitecture #AIGovernance #SoftwareEngineering

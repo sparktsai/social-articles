@@ -2,6 +2,8 @@
 
 ### Prompt? Code comments? CLAUDE.md? Or something else?
 
+[[L_BRA_A_01-0.png]]
+
 When did you start designing rules for AI?
 
 Was it when you started writing longer prompts?
@@ -62,7 +64,7 @@ That was probably my first informal rule system.
 
 I just didn't call it one yet.
 
-[[PNG]]
+[[L_BRA_A_01-1.png]]
 
 ---
 
@@ -248,7 +250,7 @@ I no longer needed to manually reconstruct the same behavioral instructions ever
 
 But it also created a much more interesting problem.
 
-[[PNG]]
+[[L_BRA_A_01-2.png]]
 
 ---
 
@@ -307,3 +309,5 @@ Eventually, the instructions became something else.
 And that raises the question I want to start this series with:
 
 > **When did your AI instructions start becoming rules?**
+
+#BehaviorRuleArchitecture #AIEngineering #PromptEngineering #SoftwareEngineering

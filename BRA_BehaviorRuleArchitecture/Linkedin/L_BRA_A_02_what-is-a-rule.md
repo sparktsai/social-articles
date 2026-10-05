@@ -2,6 +2,8 @@
 
 ### From natural-language instructions to a structured definition of AI behavior
 
+[[L_BRA_A_02-0.png]]
+
 In the previous part, I described how AI instructions gradually moved out of prompts.
 
 They became reusable instructions.
@@ -313,7 +315,7 @@ toward:
 
 > **What behavior is explicitly required or prohibited?**
 
-[[PNG]]
+[[L_BRA_A_02-1.png]]
 
 ---
 
@@ -767,7 +769,7 @@ Target alone was insufficient
 
 This was becoming more than a language problem.
 
-[[PNG]]
+[[L_BRA_A_02-2.png]]
 
 ---
 
@@ -850,3 +852,5 @@ to:
 That became the next step in the evolution of Behavior Rule Architecture.
 
 **LBRA-03: When a Rule Became an Engineering Object**
+
+#BehaviorRuleArchitecture #BehaviorRules #AIEngineering #SoftwareEngineering

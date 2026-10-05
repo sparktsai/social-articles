@@ -1,26 +1,11 @@
-# LBRA-03 — When Does a Collection of Rules Become an Architecture?
+Your AI Rule collection keeps growing. How do you keep it manageable?
 
-## Problem
+Different tasks need different combinations. Rules change, copies drift, and finding the right version becomes harder. A longer list leaves identity, validation, and ownership unresolved.
 
-A single Rule can be written, reused, and understood.
-But a growing collection of Rules raises harder questions about identity, versioning, governance, classification, validation, libraries, and composition.
+If you were facing this, what would you do?
 
-## Outline
+This article follows the move from individual Rules to a Rule Library, Rulesets, and the architecture needed to manage them together.
 
-This post explains how an atomic Rule became a manageable engineering object.
-It introduces the separation between stable normative behavior and extensible governance information.
-It then shows how schema, validation, classification, Rule Library, Ruleset, and composition principles together formed Behavior Rule Architecture.
+Read: [When Does a Collection of Rules Become an Architecture?](L_BRA_A_03_rules-to-architecture.md)
 
-## Brief
-
-Once Rules became reusable, the normative sentence was no longer enough.
-Each Rule needed an ID, a version, a status, an owner, an intent, and a place for governance information to evolve without changing the behavioral meaning.
-That led to a separation between the execution-facing part of a Rule and the governance surface around it.
-Because Markdown conventions could drift, YAML became a useful reference representation and schema validation created a structural boundary.
-As the number of Rules grew, classification and Rule Library structure made them easier to find and reuse.
-Rulesets then allowed different development scenarios to select combinations of Rules, while composition principles kept individual Rules atomic and independent.
-
-## Conclusion
-
-BRA emerged when the problem stopped being only how to write a Rule and became how Rules should exist together as engineering artifacts.
-A Rule should stay small enough to remain stable, while the architecture around it stays extensible enough to evolve.
+#BehaviorRuleArchitecture #SoftwareArchitecture #AIGovernance #SoftwareEngineering

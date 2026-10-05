@@ -1,26 +1,11 @@
-# LBRA-04 — How Do You Actually Use a Behavior Rule Architecture?
+How do you give an AI the right Rules without copying the entire Rule Library into every prompt?
 
-## Problem
+Full Rule artifacts carry governance information the model may not need. Shorter copies reduce that load, but can fall out of sync when the original Rule changes.
 
-An architecture is useful only if it can be applied inside real development work.
-The practical question is how to give the AI the right Rules for the current task without copying heavy governance artifacts into every prompt.
+If you were facing this, what would you do?
 
-## Outline
+This article explores how Skills and CLI consumers can use a shared Rule Library while keeping execution views compact.
 
-This post follows the usage model from prompt-selected Rulesets to a Rule Library.
-It explains why complete Rule artifacts are useful for governance but too heavy for routine inference.
-It then shows how Skills and CLI-style consumers can resolve compact execution views from the authoritative Rule Library.
+Read: [How Do You Actually Use a Behavior Rule Architecture?](L_BRA_A_04_using-behavior-rule-architecture.md)
 
-## Brief
-
-Early BRA usage was simple: select the relevant Ruleset for the development scenario and include it in the prompt.
-That worked better than one universal prompt, but complete Rules contained governance information that the LLM did not need for every task.
-The solution was to preserve complete Rules in the Rule Library while giving the model a smaller execution view, typically ID, version, and CNL.
-At first, that compact view could be stored separately, but that created a synchronization problem between the authoritative Rule and the execution copy.
-Skills changed the model by resolving the latest relevant Rules when the task starts, instead of maintaining another source of truth.
-CLI operations can expose the same infrastructure for humans, scripts, validation, inspection, and other development tooling.
-
-## Conclusion
-
-BRA is not a prompt, a Skill, or a CLI.
-BRA defines the Rule architecture, while the Rule Library provides the infrastructure that different consumers can use without redefining the Rules.
+#BehaviorRuleArchitecture #AIEngineering #DeveloperTools #CodingAgents
