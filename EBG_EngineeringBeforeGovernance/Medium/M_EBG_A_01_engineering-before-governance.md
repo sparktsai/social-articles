@@ -1,8 +1,6 @@
-# Until Engineering Makes State Clear and Visible, Governance Cannot Judge
+# Governance Needs Visible State
 
-## Engineering Before Governance: Why AI Governance Depends on Engineering-Visible State
-
-**Engineering Before Governance | 01 / 08**
+> Before AI can be governed, engineering must make its state clear enough to inspect and judge.
 
 [[M_EBG_A_01-0.png]]
 
@@ -14,7 +12,7 @@ In October 2025, as I followed these discussions, I began asking a more specific
 
 ---
 
-## 1. Governance Problem: Policy Does Not Tell an Engineer What to Build
+## Governance Problem: Policy Does Not Tell an Engineer What to Build
 
 “Enforce the policy.” “Use least-privilege authorization.” “Keep a human in the loop.” “Make someone accountable.” “Ensure the system is auditable.”
 
@@ -26,7 +24,7 @@ An organization may have an AI policy, an SOP, an approval workflow, and an audi
 
 ---
 
-## 2. Existing AI Governance Approaches Set Important Directions
+## Existing AI Governance Approaches Set Important Directions
 
 AI governance already has substantial organizational and technical approaches. Standards such as [ISO/IEC 42001](https://www.iso.org/standard/42001) describe requirements for establishing and continually improving an AI management system. The [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) organizes AI risk work through Govern, Map, Measure, and Manage. Enterprise policies and SOPs assign responsibilities and define review and escalation processes. Security approaches such as identity management and Zero Trust constrain who or what can access systems. CI/CD pipelines can run checks and preserve development evidence.
 
@@ -48,7 +46,7 @@ These policy directions are important. They help management establish expectatio
 
 ---
 
-## 3. Why Policy and Engineering Fail to Meet
+## Why Policy and Engineering Fail to Meet
 
 When I tried to carry AI governance expectations into software development, two dependencies stopped the work from proceeding.
 
@@ -68,7 +66,7 @@ The dependency is therefore more than a policy-to-tool mapping. It is a path fro
 
 ---
 
-## 4. Scope: Engineering Decision Behavior Governance
+## Scope: Engineering Decision Behavior Governance
 
 The question I began to study is bounded: how should AI-assisted software development decisions be governed while work is being developed, generated, reviewed, and handed off? This is not an attempt to cover every form of AI governance, every production-time runtime control, or every organizational policy.
 
@@ -88,7 +86,7 @@ These policy directions are not yet engineering-element definitions. EDBF organi
 
 ---
 
-## 5. Engineering Design: From Requirement to Evidence
+## Engineering Design: From Requirement to Evidence
 
 The practical method begins with a governance requirement, but it does not stop at writing that requirement into an SOP. It proceeds through engineering work:
 
@@ -124,7 +122,7 @@ This also clarifies the meaning of “engineering before governance.” Governan
 
 ---
 
-## 6. A Governance Process That Can Be Repeated
+## A Governance Process That Can Be Repeated
 
 Suppose an organization requires AI-generated software changes to follow approved Rules, remain within authorized Scope, and receive meaningful human review.
 
@@ -153,3 +151,7 @@ Without engineering elements and Evidence, AI governance remains too far from th
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
 - [NIST Secure Software Development Framework](https://csrc.nist.gov/projects/ssdf)
 - [NIST DevSecOps Practices](https://pages.nist.gov/nccoe-devsecops/)
+
+Engineering Before Governance · 01 / 08
+
+#ArtificialIntelligence #AIGovernance #SoftwareEngineering #ResponsibleAI #AIAgents

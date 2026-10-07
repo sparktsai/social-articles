@@ -1,8 +1,6 @@
-# You Cannot Govern a Handoff If Responsibility and Context Change in Transit
+# Keep AI Handoffs Accountable
 
-## Three development handoffs expose a gap between workflow control and accountable human work.
-
-**Engineering Before Governance | 07 / 08**
+> Carry context, authority, and evidence forward so the next actor can fulfill their responsibility.
 
 [[M_EBG_A_07-0.png]]
 
@@ -18,7 +16,7 @@ Before a handoff can be governed, engineering must make the transfer and the rec
 
 ---
 
-## 1. Governance Problem: A Handoff Can Look Complete While the Work Is Not Continuable
+## Governance Problem: A Handoff Can Look Complete While the Work Is Not Continuable
 
 Development work moves between people and agents, then between specialist agents, and often returns to a person for review. Much governance discussion focuses on agent workflow design: routing, constraints, monitoring, and AI accountability. Those matter, but the human-AI handoffs can remain underspecified: what information each side must provide, what the receiver is responsible for, and whether they have enough context and authority to do it.
 
@@ -42,7 +40,7 @@ This is a governance gap, not merely a workflow defect. A workflow may successfu
 
 ---
 
-## 2. Existing Solutions Handle Routing, Context, and Oversight in Different Ways
+## Existing Solutions Handle Routing, Context, and Oversight in Different Ways
 
 We already use many ways to pass development work forward.
 
@@ -75,7 +73,7 @@ The gap is not the absence of workflow tools. It is whether the transfer gives t
 
 ---
 
-## 3. What the Three Handoff Directions Still Leave Unresolved
+## What the Three Handoff Directions Still Leave Unresolved
 
 ### H2A: Did the agent receive enough information and a clear boundary?
 
@@ -93,7 +91,7 @@ HITL identifies where a person appears; governance must define what they are exp
 
 ---
 
-## 4. Scope: Three Directions, Three Sets of Engineering Elements
+## Scope: Three Directions, Three Sets of Engineering Elements
 
 The scope is software development: requirements, design, code generation, and review, not post-deployment operations.
 
@@ -122,7 +120,7 @@ So what are we governing? Not the mere existence of a prompt, message, or approv
 
 ---
 
-## 5. Engineering the Transfer Before Calling It Governance
+## Engineering the Transfer Before Calling It Governance
 
 For each boundary, define the next activity, what its receiver must know and may do, and which responsibility remains with them. Then capture the actual transfer.
 
@@ -162,7 +160,7 @@ Act: continue, return, reroute, correct, or improve the handoff design
 
 ---
 
-## 6. Example: One Payment Change, Three Different Handoffs
+## Example: One Payment Change, Three Different Handoffs
 
 Consider a payment retry change moving from an engineer to an analysis agent, then an implementation agent, and finally a human reviewer.
 
@@ -247,3 +245,7 @@ Different transitions need different packages. What they share is this: capture 
 - [Spark Tsai, *Viewpoint-Structured Specification (VSS)*](https://doi.org/10.31224/6612)
 - [Spark Tsai, *Decision Risk: A Structural Governance Framework for AI-Assisted Software Development*](https://doi.org/10.5281/zenodo.19025533)
 - Spark Tsai, *Engineering Before Governance: Why AI Governance Depends on Engineering-Visible State*, working paper v0.2, 2026.
+
+Engineering Before Governance · 07 / 08
+
+#ArtificialIntelligence #AIGovernance #SoftwareEngineering #AIAgents #HumanInTheLoop

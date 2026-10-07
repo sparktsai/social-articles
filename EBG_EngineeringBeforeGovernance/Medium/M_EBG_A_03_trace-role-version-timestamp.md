@@ -1,8 +1,6 @@
-# You Cannot Govern What You Cannot Identify and Trace
+# Governance Needs Traceable Evidence
 
-## Give each element a traceable identity, then connect its changing state to the rest of the engineering chain.
-
-**Engineering Before Governance | 03 / 08**
+> Connect each decision to identifiable inputs, versions, actors, and results.
 
 [[M_EBG_A_03-0.png]]
 
@@ -31,7 +29,7 @@ Before evidence can support repeatable governance, engineering must identify eac
 
 ---
 
-## 1. Governance Problem: Evidence Without a Coordinate Becomes Another Search Problem
+## Governance Problem: Evidence Without a Coordinate Becomes Another Search Problem
 
 Article 02 separated Development Evidence from a polished explanation. It asked the engineering system to record what actually entered the generation, what actually appeared during the decision, what actually triggered, and what was actually produced.
 
@@ -74,7 +72,7 @@ Traceability then exists as a reconstruction exercise, not as an engineered prop
 
 ---
 
-## 2. Existing Solutions Already Trace Important Things
+## Existing Solutions Already Trace Important Things
 
 Software engineering is not short of identifiers.
 
@@ -104,7 +102,7 @@ What is still missing in many AI-assisted development workflows is a consistent 
 
 ---
 
-## 3. What Existing Solutions Still Cannot Resolve
+## What Existing Solutions Still Cannot Resolve
 
 The first gap is granularity.
 
@@ -163,7 +161,7 @@ If the tracing model cannot identify these states, it cannot connect the behavio
 
 ---
 
-## 4. Governance Scope and the Traceability Engineering Elements
+## Governance Scope and the Traceability Engineering Elements
 
 Let us narrow the scope before designing the record.
 
@@ -257,7 +255,7 @@ Article 03: How are governance-relevant elements identified and connected, and w
 
 ---
 
-## 5. Engineering Fine-Grained Traceability
+## Engineering Fine-Grained Traceability
 
 The engineering design begins at creation time.
 
@@ -355,7 +353,7 @@ Act: correct broken links, improve capture, or reject unsupported governance cla
 
 ---
 
-## 6. Example: Tracing One Payment Retry Decision Beyond Documents and Code
+## Example: Tracing One Payment Retry Decision Beyond Documents and Code
 
 Now return to the Development Evidence from Article 02.
 
@@ -485,3 +483,7 @@ Together, stable element identities, relevant state, typed relationships, and ev
 - [Spark Tsai, *Viewpoint-Structured Specification (VSS)*](https://doi.org/10.31224/6612)
 - [Spark Tsai, *Toward Decision Behavior Governance: Governance Existence, Invocation, and Decision Formation*](https://doi.org/10.5281/zenodo.18876165)
 - Spark Tsai, *Engineering Before Governance: Why AI Governance Depends on Engineering-Visible State*, working paper v0.2, 2026.
+
+Engineering Before Governance · 03 / 08
+
+#ArtificialIntelligence #AIGovernance #SoftwareEngineering #Observability #SoftwareDevelopment

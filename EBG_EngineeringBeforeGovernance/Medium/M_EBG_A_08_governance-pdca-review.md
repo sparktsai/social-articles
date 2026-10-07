@@ -1,8 +1,6 @@
-# AI Governance Needs an Engineering Loop, Not Just a Policy
+# Close the AI Governance Loop
 
-## From decision evidence to traceable, reviewable development practice
-
-**Engineering Before Governance | 08 / 08**
+> Use decision evidence and traceability to review development work and improve governance.
 
 [[M_EBG_A_08-0.png]]
 
@@ -10,7 +8,7 @@ AI governance policies can set important expectations. But when we bring those e
 
 That question has connected every article in this series. We began with the distance between a governance policy and an engineering judgment. Then we worked from the development process upward: first making decision behavior observable, then making its elements traceable, and then applying those foundations to context, rules, risk, and workflow. Together, these steps describe how governance can become a repeatable practice rather than a statement of intent.
 
-## 1. Why Engineering Comes Before a Governance Judgment
+## Why Engineering Comes Before a Governance Judgment
 
 The starting problem was not a lack of policy. Organizations already talk about policy enforcement, authorization, human oversight, accountability, and audit. The difficulty is that a policy does not tell an engineer what state, artifact, record, or control to build into an AI-assisted development process.
 
@@ -33,7 +31,7 @@ Engineering design
 
 This is the sense in which engineering comes before governance: the requirement can and should guide engineering from the beginning, but a specific governance judgment needs an engineering basis. Without visible state and supporting records, policy remains too far from the development event it is meant to govern.
 
-## 2. The Starting Infrastructure: Evidence and Traceability
+## The Starting Infrastructure: Evidence and Traceability
 
 Articles 02 and 03 establish the two foundations from which the later governance applications proceed.
 
@@ -43,7 +41,7 @@ Evidence answers, “What can we show about this decision?” But an evidence re
 
 These two foundations make governance actionable. Evidence provides material for a judgment; Traceability identifies what that material refers to and lets a reviewer follow the development chain. They are infrastructure, not governance by themselves. The governance use begins when an organization evaluates this Evidence and trace against a requirement and decides what should happen.
 
-## 3. Applying the Foundations from the Bottom Up
+## Applying the Foundations from the Bottom Up
 
 With Evidence and Traceability in place, Articles 04–07 applied them to specific governance problems in development. Each one makes a different part of decision behavior visible and reviewable.
 
@@ -73,7 +71,7 @@ A workflow can route tasks while still losing important information or responsib
 
 That makes agent work governable: the organization can examine the agent's Context, Rules, and risks, then adjust the workflow or controls. For a human handoff, the question is whether the AI-provided artifact and supporting analysis are sufficient for the human's assigned responsibility. A code diff may support code review; decision and risk analysis may be needed if the human is expected to assess the decision itself. Human oversight is meaningful only when the responsibility is clear and the information is sufficient to perform it.
 
-## 4. How Governance Uses What Engineering Makes Visible
+## How Governance Uses What Engineering Makes Visible
 
 Once the engineering process provides Evidence and Traceability, governance has something concrete to work with. The questions become practical: what Evidence is available, what can be traced, and what should be reviewed or changed?
 
@@ -95,7 +93,7 @@ Traceable handoff records show what was transferred and what the receiving actor
 
 In each case, engineering supplies the visible state and trace; governance interprets it against policy, assigns responsibility, and decides whether to continue, correct, restrict, or improve the process.
 
-## 5. From Engineering Elements to Governance Capability
+## From Engineering Elements to Governance Capability
 
 Across these applications, the engineering work is to make governance elements concrete, document the Evidence that supports them, and preserve a traceable development process. That is the role of the Engineering Decision Behavior Framework (EDBF) in this series: an engineering foundation for representing and connecting observable decision behavior and its related elements.
 
@@ -111,7 +109,7 @@ With these foundations, policy directions become more practical in software deve
 
 These are not automatic guarantees of compliance. They are capabilities that engineering makes available so management and audit can define and carry out concrete judgments.
 
-## 6. The Governance PDCA Becomes Possible
+## The Governance PDCA Becomes Possible
 
 The same structure supports a repeatable PDCA cycle:
 
@@ -130,7 +128,7 @@ For Prompt and Context, the organization can improve which system views inform a
 
 That is how the cycle learns from development behavior. Check is grounded in documented Evidence and traceable work. Act can target the particular engineering element that failed or proved insufficient. The next Plan can then use the improved policy, Rule, Scope, or handoff design.
 
-## 7. What This Series Establishes
+## What This Series Establishes
 
 The series began with a simple gap: governance policies express what an organization expects, but they do not tell engineers what to construct. It then defined the scope as decision behavior in software development and developed a method for turning governance requirements into engineering elements.
 
@@ -139,3 +137,7 @@ Articles 02 and 03 supplied the starting infrastructure: Evidence of decision be
 When governance elements are concrete, Evidence is documented, and the development process is traceable, an organization can do more than publish policies. It can implement policy enforcement and authorization, provide meaningful human oversight, trace accountability, and prepare audit material grounded in the work. Most importantly, it can repeat Plan, Do, Check, and Act against observable development behavior, then use what it learns to improve both engineering and governance.
 
 That is the practical outcome: not engineering instead of governance, and not Evidence mistaken for governance, but an engineering foundation that gives AI governance in software development something real to evaluate and improve.
+
+Engineering Before Governance · 08 / 08
+
+#ArtificialIntelligence #AIGovernance #SoftwareEngineering #RiskManagement #ResponsibleAI

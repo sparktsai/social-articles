@@ -1,8 +1,6 @@
-# You Cannot Govern an Engineering Decision If Its Record Is Only a Story
+# AI Decisions Need Evidence
 
-## Most decision records explain what happened afterward. They do not show what was visible when the choice was made.
-
-**Engineering Before Governance | 02 / 08**
+> Capture what the agent received, chose, and produced while the decision happened.
 
 [[M_EBG_A_02-0.png]]
 
@@ -28,7 +26,7 @@ Before a decision can be governed, engineering must make the relevant behavior v
 
 ---
 
-## 1. Governance Problem: A Decision Record Is Not Yet Decision Evidence
+## Governance Problem: A Decision Record Is Not Yet Decision Evidence
 
 Look at almost any development workflow today and you will find plenty of material that looks like governance evidence: tickets, specifications, prompts, chat histories, pull requests, tool logs, approvals, test results, and Git commits.
 
@@ -48,7 +46,7 @@ What we need is neither an abstract decision summary nor raw model telemetry suc
 
 ---
 
-## 2. Existing Solutions Preserve Parts of the Decision
+## Existing Solutions Preserve Parts of the Decision
 
 Fortunately, we do not need to invent everything from scratch.
 
@@ -71,7 +69,7 @@ That gives us several useful pieces. What it does not yet give us is one clear, 
 
 ---
 
-## 3. What Existing Solutions Still Cannot Resolve
+## What Existing Solutions Still Cannot Resolve
 
 This is where an otherwise polished decision record starts to come apart: it often contains more than the generation actually did.
 
@@ -89,7 +87,7 @@ That may sound like a documentation problem, but it is really an evidence proble
 
 ---
 
-## 4. Governance Scope and the Elements That Must Become Visible
+## Governance Scope and the Elements That Must Become Visible
 
 To keep the problem manageable, let us narrow the lens. We are looking at one decision that occurs while an LLM generates a document or a piece of code.
 
@@ -125,7 +123,7 @@ Finally, connect the decision behavior to the document or code that was generate
 
 ---
 
-## 5. Engineering the Decision Evidence
+## Engineering the Decision Evidence
 
 Once that behavior is visible, the engineering design becomes much easier to explain. We only need to keep three things separate:
 
@@ -186,7 +184,7 @@ Act: improve the generation or the capture mechanism
 
 ---
 
-## 6. Example: One Retry Decision
+## Example: One Retry Decision
 
 Now we can return to the payment retry decision. The example records only what occurred while the code was generated.
 
@@ -257,3 +255,7 @@ Having this record does not mean the decision has been governed. It gives later 
 - [Spark Tsai, *Toward Decision Behavior Governance: Governance Existence, Invocation, and Decision Formation*](https://doi.org/10.5281/zenodo.18876165)
 - [Spark Tsai, *Decision Analysis: Effect-Oriented Structural Scope Audit for AI-Assisted Software Development*](https://doi.org/10.31224/6616)
 - Spark Tsai, *Engineering Before Governance: Why AI Governance Depends on Engineering-Visible State*, working paper v0.2, 2026.
+
+Engineering Before Governance · 02 / 08
+
+#ArtificialIntelligence #AIGovernance #SoftwareEngineering #AIAgents #ResponsibleAI

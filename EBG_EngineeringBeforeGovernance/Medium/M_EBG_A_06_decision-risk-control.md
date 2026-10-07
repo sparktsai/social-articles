@@ -1,8 +1,6 @@
-# You Cannot Control Decision Risk If Risk Exists Only as a Score
+# Make AI Decision Risk Actionable
 
-## A red cell in a risk matrix does not show which development decision created the risk, what evidence supports it, or whether a control actually reduced it.
-
-**Engineering Before Governance | 06 / 08**
+> Connect each risk to the decision, supporting evidence, control, and observed result.
 
 [[M_EBG_A_06-0.png]]
 
@@ -31,7 +29,7 @@ Before risk can be governed, engineering must make the condition behind the risk
 
 ---
 
-## 1. Governance Problem: A Risk Rating Is Not Yet a Controllable Risk
+## Governance Problem: A Risk Rating Is Not Yet a Controllable Risk
 
 Look at most software development processes and you will find familiar risk signals: a high-risk ticket, a red item in a risk register, a security finding, a failed test, a large diff, or a reviewer saying, "This change feels dangerous."
 
@@ -57,7 +55,7 @@ A change can pass tests and still carry decision risk because its origin, bounda
 
 ---
 
-## 2. Existing Solutions Already Manage Important Parts of Risk
+## Existing Solutions Already Manage Important Parts of Risk
 
 Risk management is not new, and software teams already have several mature practices.
 
@@ -98,7 +96,7 @@ RTM can show that a payment requirement traces to a design component, implementa
 
 ---
 
-## 3. What Existing Solutions Still Cannot Resolve
+## What Existing Solutions Still Cannot Resolve
 
 The first gap is granularity.
 
@@ -154,7 +152,7 @@ No signal is not the same as no risk.
 
 ---
 
-## 4. Governance Scope and the Decision Risk Elements That Must Become Visible
+## Governance Scope and the Decision Risk Elements That Must Become Visible
 
 To keep the scope practical, this article looks at one development decision that contributes to a generated document or code artifact.
 
@@ -222,7 +220,7 @@ These elements make risk inspectable without pretending that every judgment can 
 
 ---
 
-## 5. Engineering Design: Connect Evidence, Risk, Control, and Result
+## Engineering Design: Connect Evidence, Risk, Control, and Result
 
 The engineering design begins with evidence from the earlier articles.
 
@@ -304,7 +302,7 @@ Act: accept residual risk or improve the engineering control
 
 ---
 
-## 6. Example: Controlling Risk in One Payment Retry Decision
+## Example: Controlling Risk in One Payment Retry Decision
 
 Return to the retry decision from Articles 02–05.
 
@@ -427,3 +425,7 @@ Engineering makes that chain visible. Governance decides whether the remaining r
 - [Spark Tsai, *Behavior Rule Architecture: Rule-Based Governance of AI System Behavior*](https://doi.org/10.31224/6681)
 - [Spark Tsai, *Scope as a Governance Primitive: Making Inference, Authority, Effect, and Evidence Explicit in AI Governance*](https://doi.org/10.5281/zenodo.22108234)
 - Spark Tsai, *Engineering Before Governance: Why AI Governance Depends on Engineering-Visible State*, working paper v0.2, 2026.
+
+Engineering Before Governance · 06 / 08
+
+#ArtificialIntelligence #AIGovernance #SoftwareEngineering #RiskManagement #ResponsibleAI

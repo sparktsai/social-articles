@@ -1,8 +1,6 @@
-# A Rule Cannot Govern an AI Development Decision If You Cannot Prove It Applied
+# Show How Rules Shape AI Decisions
 
-## A rule can exist in the repository, appear in the final explanation, and still have had no observable effect on the decision.
-
-**Engineering Before Governance | 05 / 08**
+> Trace which rules reached the agent, when they applied, and what observable effect they had.
 
 [[M_EBG_A_05-0.png]]
 
@@ -29,7 +27,7 @@ That is the governance problem:
 
 ---
 
-## 1. Governance Problem: Rule Existence Is Not Rule Application
+## Governance Problem: Rule Existence Is Not Rule Application
 
 Open almost any AI-assisted development repository today and you will find rules everywhere.
 
@@ -80,7 +78,7 @@ Seen this way, the issue is not mainly whether the rule was written well. The is
 
 ---
 
-## 2. Existing Solutions Make Parts of Rules Operational
+## Existing Solutions Make Parts of Rules Operational
 
 Again, we are not starting from nothing. Current tools already solve several parts of the problem.
 
@@ -112,7 +110,7 @@ What we still cannot see is how one specific rule traveled into one specific eng
 
 ---
 
-## 3. What Existing Solutions Still Cannot Resolve
+## What Existing Solutions Still Cannot Resolve
 
 The first gap appears before any tool runs: we often mix guidance and rules in the same prose.
 
@@ -145,7 +143,7 @@ Outcome compliance and decision-behavior compliance are separate governance clai
 
 ---
 
-## 4. Governance Scope and the Elements That Must Become Visible
+## Governance Scope and the Elements That Must Become Visible
 
 To make this governable, we need to narrow the unit. This article stays inside the development stage and looks at one versioned rule in relation to one Decision ID and one approved Change Scope.
 
@@ -191,7 +189,7 @@ None of this requires one universal file format. What matters is that the meanin
 
 ---
 
-## 5. Engineering Design: From Rule Asset to Governance Judgment
+## Engineering Design: From Rule Asset to Governance Judgment
 
 This is where Behavior Rule Architecture, or BRA, becomes useful. It offers one path from broad intent to atomic, versioned rules and reusable rulesets.
 
@@ -263,7 +261,7 @@ Together they create governance infrastructure. Governance occurs only when an a
 
 ---
 
-## 6. Example: Auditing One Rule Against One Payment Retry Decision
+## Example: Auditing One Rule Against One Payment Retry Decision
 
 Let us take the same payment retry decision and keep only the fields needed to see the distinction.
 
@@ -357,3 +355,7 @@ A rule in a file is an asset. Connected to Scope, decision behavior, evidence, a
 - [Spark Tsai, *Toward Decision Behavior Governance: Governance Existence, Invocation, and Decision Formation*](https://doi.org/10.5281/zenodo.18876165)
 - [Spark Tsai, *Decision Analysis: Effect-Oriented Structural Scope Audit for AI-Assisted Software Development*](https://doi.org/10.31224/6616)
 - Spark Tsai, *Engineering Before Governance: Why AI Governance Depends on Engineering-Visible State*, working paper v0.2, 2026.
+
+Engineering Before Governance · 05 / 08
+
+#ArtificialIntelligence #AIGovernance #SoftwareEngineering #AIAgents #ResponsibleAI

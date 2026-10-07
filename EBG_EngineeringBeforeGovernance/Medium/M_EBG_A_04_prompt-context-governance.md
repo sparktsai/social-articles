@@ -1,8 +1,6 @@
-# You Cannot Govern an AI Development Run If Its Prompt and Context Disappear
+# Preserve the Context Behind AI Changes
 
-## A visible prompt is not the complete development basis, and a surviving code change does not prove what the agent received.
-
-**Engineering Before Governance | 04 / 08**
+> Record the prompt and context the agent actually received, then trace them to the change.
 
 [[M_EBG_A_04-0.png]]
 
@@ -31,7 +29,7 @@ That is the governance problem:
 
 ---
 
-## 1. Governance Problem: The Visible Prompt Is Only Part of the Basis
+## Governance Problem: The Visible Prompt Is Only Part of the Basis
 
 When a result goes wrong, the first question is often: "What prompt did we give the agent?"
 
@@ -64,7 +62,7 @@ Again, we are not trying to reconstruct the model's mind. We are trying to prese
 
 ---
 
-## 2. Existing Solutions Preserve Parts of the Basis
+## Existing Solutions Preserve Parts of the Basis
 
 The good news is that teams already preserve many useful pieces of an AI-assisted development run.
 
@@ -100,7 +98,7 @@ What is missing is not one more document. It is a reliable way to say which vers
 
 ---
 
-## 3. What Existing Solutions Still Cannot Resolve
+## What Existing Solutions Still Cannot Resolve
 
 This is where the gaps between the layers begin to matter.
 
@@ -131,7 +129,7 @@ This is the **Versioned Development Basis Gap**.
 
 ---
 
-## 4. Governance Scope and the Elements That Must Become Visible
+## Governance Scope and the Elements That Must Become Visible
 
 Let us narrow the problem before adding more structure. This article stays inside the software development stage and looks at one identifiable AI-assisted development run.
 
@@ -180,7 +178,7 @@ Their existence makes governance possible. It does not mean governance has alrea
 
 ---
 
-## 5. Engineering the Development Basis and Audit
+## Engineering the Development Basis and Audit
 
 The important shift is that we build this basis before the agent changes code, not after someone asks for an audit.
 
@@ -244,7 +242,7 @@ Act: accept, reject, correct, escalate, or improve the controls
 
 ---
 
-## 6. Example: Auditing a Payment Retry Development Change
+## Example: Auditing a Payment Retry Development Change
 
 With that in place, the payment retry request no longer has to be remembered as a conversation. It can be reviewed as an identifiable development change.
 
@@ -332,3 +330,7 @@ Engineering comes first because governance cannot compare, judge, or improve wha
 - [Spark Tsai, *Scope as a Governance Primitive: Making Inference, Authority, Effect, and Evidence Explicit in AI Governance*](https://doi.org/10.5281/zenodo.22108234)
 - [Spark Tsai, *Decision Analysis: Effect-Oriented Structural Scope Audit for AI-Assisted Software Development*](https://doi.org/10.31224/6616)
 - Spark Tsai, *Engineering Before Governance: Why AI Governance Depends on Engineering-Visible State*, working paper v0.2, 2026.
+
+Engineering Before Governance · 04 / 08
+
+#ArtificialIntelligence #AIGovernance #SoftwareEngineering #LLM #PromptEngineering
