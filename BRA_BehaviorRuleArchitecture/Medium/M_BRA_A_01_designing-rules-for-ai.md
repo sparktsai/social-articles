@@ -1,8 +1,6 @@
-# When Did You Start Designing Rules for AI?
+# When AI Instructions Become Rules
 
-*Prompt? Code comments? CLAUDE.md? Or something else?*
-
-**Behavior Rule Architecture | 01 / 06**
+> How repeated prompts became reusable constraints for AI-assisted development.
 
 When did you start designing rules for AI?
 
@@ -309,6 +307,10 @@ Eventually, the instructions became something else.
 And that raises the question I want to start this series with:
 
 > **When did your AI instructions start becoming rules?**
+
+Behavior Rule Architecture · 01 / 06
+
+#ArtificialIntelligence #AIGovernance #SoftwareEngineering #PromptEngineering #AIAgents
 
 
 

@@ -1,8 +1,6 @@
-# How Do You Know the AI Actually Followed the Rule?
+# Did AI Follow the Rule?
 
-*From reusable Rules to observable decision behavior, risk-triggered review, and Rule PDCA*
-
-**Behavior Rule Architecture | 05 / 06**
+> Use decision evidence and risk signals to review behavior and improve the rules.
 
 After using behavioral Rules in actual AI-assisted software development, the initial results looked promising.
 
@@ -40,7 +38,7 @@ But I still could not answer a basic governance question:
 
 ---
 
-## Problem 1: Better output did not prove that the Rule was followed
+## Better output did not prove that the Rule was followed
 
 Consider a simple development constraint:
 
@@ -195,7 +193,7 @@ Once BRA Rules existed, this evidence structure became much more useful.
 
 ---
 
-## Problem 2: Which Rule actually constrained this decision?
+## Which Rule actually constrained this decision?
 
 The evidence already had a concept of `Constraints`.
 
@@ -401,7 +399,7 @@ But I had created a review problem.
 
 ---
 
-## Problem 3: Evidence that nobody can review is not practical governance
+## Evidence that nobody can review is not practical governance
 
 The obvious solution would be:
 
@@ -449,7 +447,7 @@ That question connected this work to another part of my research: **Decision Ris
 
 ---
 
-## Problem 4: Review should start from risk, not from evidence volume
+## Review should start from risk, not from evidence volume
 
 My Decision Risk work examined another question:
 
@@ -671,7 +669,7 @@ Sometimes it was telling me:
 
 ---
 
-## Problem 5: A Rule can be followed and still need revision
+## A Rule can be followed and still need revision
 
 This is where Rule governance became different from simple compliance checking.
 
@@ -1156,6 +1154,10 @@ That was the point where the Rule stopped being only a reusable AI constraint.
 It became an engineering asset that could be observed, evaluated, corrected, and improved through actual development experience.
 
 And that was the point where **development Rule PDCA** became real.
+
+Behavior Rule Architecture · 05 / 06
+
+#ArtificialIntelligence #AIGovernance #SoftwareEngineering #ResponsibleAI #RiskManagement
 
 
 

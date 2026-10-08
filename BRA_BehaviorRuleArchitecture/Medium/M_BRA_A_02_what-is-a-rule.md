@@ -1,8 +1,6 @@
-# What Is a Rule?
+# What Makes an AI Rule?
 
-*From natural-language instructions to a structured definition of AI behavior*
-
-**Behavior Rule Architecture | 02 / 06**
+> Define required and prohibited behavior so instructions can become reusable engineering assets.
 
 In the previous part, I described how AI instructions gradually moved out of prompts.
 
@@ -68,7 +66,7 @@ They started with software development problems.
 
 ---
 
-## Problem 1: Moving instructions out of prompts did not remove interpretation
+## Moving instructions out of prompts did not remove interpretation
 
 Moving instructions from prompts into reusable files solved one problem:
 
@@ -116,7 +114,7 @@ So I started looking at the language itself.
 
 ---
 
-## Problem 2: Natural-language sentence structure was too free
+## Natural-language sentence structure was too free
 
 Natural language is useful because it is expressive.
 
@@ -174,7 +172,7 @@ But once sentence structure became clearer, another problem became easier to see
 
 ---
 
-## Problem 3: Structured sentences could still carry different normative meanings
+## Structured sentences could still carry different normative meanings
 
 Even with clearer sentence structure, the normative vocabulary was still wide open.
 
@@ -247,7 +245,7 @@ CNL addressed normative variation.
 
 ---
 
-## Problem 4: Too many normative expressions still required interpretation
+## Too many normative expressions still required interpretation
 
 CNL reduced the vocabulary, but another problem remained.
 
@@ -319,7 +317,7 @@ toward:
 
 ---
 
-## Problem 5: MUST and MUST NOT still did not make a rule executable
+## MUST and MUST NOT still did not make a rule executable
 
 There was an important limitation.
 
@@ -357,7 +355,7 @@ That narrower problem needed to be solved first.
 
 ---
 
-## Problem 6: Normative polarity did not tell me what behavior was being governed
+## Normative polarity did not tell me what behavior was being governed
 
 Knowing that something was required or prohibited was still not enough.
 
@@ -472,7 +470,7 @@ But making Target explicit exposed another problem almost immediately.
 
 ---
 
-## Problem 7: Every new Target seemed to require another Rule
+## Every new Target seemed to require another Rule
 
 Once Target became explicit, the Rule became easier to understand.
 
@@ -526,7 +524,7 @@ This distinction became important.
 
 ---
 
-## Problem 8: The Rule and where the Rule applies were not the same thing
+## The Rule and where the Rule applies were not the same thing
 
 This was the point where another separation started to become necessary.
 
@@ -603,7 +601,7 @@ That idea would matter much more later.
 
 ---
 
-## Problem 9: Target alone could not fully describe where a Rule applied
+## Target alone could not fully describe where a Rule applied
 
 Once I started separating a Rule from its applicable Target, another limitation became visible.
 
@@ -680,7 +678,7 @@ That question would eventually become much larger than Rule design itself.
 
 ---
 
-## Problem 10: I was calling things “Rules” before I could define what a Rule was
+## I was calling things “Rules” before I could define what a Rule was
 
 Earlier, I had already been using rule lists and rulesets.
 
@@ -773,7 +771,7 @@ This was becoming more than a language problem.
 
 ---
 
-## Problem 11: An instruction could be reused, but its meaning could still be reconstructed differently
+## An instruction could be reused, but its meaning could still be reconstructed differently
 
 This became the deeper distinction between an instruction and the emerging Rule concept.
 
@@ -805,7 +803,7 @@ Once that became possible, however, a completely different class of problems app
 
 ---
 
-## Problem 12: Once Rules became reusable, language was no longer the main problem
+## Once Rules became reusable, language was no longer the main problem
 
 If I have one Rule, I can simply read it.
 
@@ -852,6 +850,10 @@ to:
 That became the next step in the evolution of Behavior Rule Architecture.
 
 **Part 03: When a Collection of Rules Becomes an Architecture**
+
+Behavior Rule Architecture · 02 / 06
+
+#ArtificialIntelligence #AIGovernance #SoftwareEngineering #PromptEngineering #ResponsibleAI
 
 
 

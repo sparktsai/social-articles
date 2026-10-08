@@ -1,8 +1,6 @@
-# How Do You Actually Use a Behavior Rule Architecture?
+# Putting AI Rules to Work
 
-*From prompt-selected Rulesets to Rule Libraries, Skills, and CLI*
-
-**Behavior Rule Architecture | 04 / 06**
+> Deliver the right rules through libraries, skills, and CLI tools during development.
 
 In the previous parts of this series, the problem gradually changed.
 
@@ -39,7 +37,7 @@ That question changed the way I used BRA several times.
 
 ---
 
-## Problem 1: I had Rulesets, but how did I actually apply them?
+## I had Rulesets, but how did I actually apply them?
 
 This was before Skills became a common way to package AI development workflows.
 
@@ -92,7 +90,7 @@ The Rules themselves had become too rich.
 
 ---
 
-## Problem 2: A complete Rule was useful for governance, but too heavy for every inference
+## A complete Rule was useful for governance, but too heavy for every inference
 
 By this point, a Rule was no longer just one normative sentence.
 
@@ -157,7 +155,7 @@ I just did not need to send all of it to the LLM every time.
 
 ---
 
-## Problem 3: I needed one representation for governance and another for execution
+## I needed one representation for governance and another for execution
 
 My response was to separate the two concerns.
 
@@ -296,7 +294,7 @@ But separating the authoritative Rule from its compact execution representation 
 
 ---
 
-## Problem 4: Two representations created a synchronization problem
+## Two representations created a synchronization problem
 
 Suppose the Rule Library contained:
 
@@ -356,7 +354,7 @@ That raised a better question:
 
 ---
 
-## Problem 5: If Rules were engineering assets, how should new Rules enter the Library?
+## If Rules were engineering assets, how should new Rules enter the Library?
 
 There was also another side to the Rule Library.
 
@@ -453,7 +451,7 @@ The read path still had the synchronization problem.
 
 ---
 
-## Problem 6: Skills changed when the execution view could be created
+## Skills changed when the execution view could be created
 
 The next major change came when Skills became practical as a way to package AI development workflows.
 
@@ -609,7 +607,7 @@ The Skill was a later consumption mechanism for an architecture that already exi
 
 ---
 
-## Problem 7: A Skill should not become the architecture
+## A Skill should not become the architecture
 
 Once the Skill worked, another distinction became important.
 
@@ -896,6 +894,10 @@ That is where the next part begins:
 > **Part 05 — How Do You Know the AI Actually Followed the Rule?**
 
 From behavioral Rules to decision evidence, evaluation, and PDCA.
+
+Behavior Rule Architecture · 04 / 06
+
+#ArtificialIntelligence #AIGovernance #SoftwareEngineering #AIAgents #DeveloperTools
 
 
 
