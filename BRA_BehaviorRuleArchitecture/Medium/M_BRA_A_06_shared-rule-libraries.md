@@ -184,6 +184,8 @@ or
 Shares it again
 ```
 
+[[M_BRA_A_06-2.png]]
+
 One library might contain Java Rules.
 
 Another might contain SaaS Rules.
