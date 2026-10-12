@@ -9,7 +9,7 @@ Create a publish-ready X Article that makes one defensible claim for one identif
 
 ## Required reference
 
-Read [articles-guide.md](articles-guide.md) completely before drafting or reviewing an Article. Treat it as the authoritative platform and editorial guide. Use [post.md](post.md) only when creating teaser Posts, follow-up Posts, or threads for distribution.
+Read [articles-guide.md](articles-guide.md) completely before drafting or reviewing an Article. Treat it as the authoritative platform and editorial guide. Use [post-guides.md](post-guides.md) only when creating teaser Posts, follow-up Posts, or threads for distribution.
 
 If current X product behavior, eligibility, formatting, or recommendation guidance matters, verify it against official X sources before writing. Distinguish official statements from inferences. Never promise reach, virality, or algorithmic promotion.
 
@@ -32,6 +32,20 @@ Output location:
 Infer missing fields when the context supports a safe choice. Ask only when a missing answer would materially change the article. Default to the language of the requested output or source material.
 
 Do not invent facts, results, quotations, customer stories, statistics, or personal experience. Mark unsupported placeholders explicitly or research them when the user authorizes or requires current facts.
+
+## Apply the short-to-medium length strategy
+
+Until the user changes this strategy, default new X Articles to a **short-to-medium** format:
+
+- English: **600–900 words**.
+- Other languages: target an equivalent **3–5 minute reading experience** instead of mechanically converting word count.
+- One core claim, usually developed across **3–5 substantive sections**.
+- Reach the tension and reading promise within the first few short paragraphs.
+- Include only the evidence, examples, context, counterexamples, and boundaries needed to establish the claim.
+
+Treat this as an editorial experiment, not an official X recommendation or ranking factor. Do not remove necessary evidence, source context, limitations, or verification to hit the range.
+
+If the claim cannot be established responsibly within the target, narrow the claim, split independent claims into a short Article series, or exceed the target and briefly note why.
 
 ## Build the argument
 
@@ -129,7 +143,7 @@ When the user asks for a complete publishing package, append these after the Art
 4. **Follow-up Posts** — 2–4 distinct angles drawn from a case, model, counterexample, diagram, or practical diagnostic.
 5. **Reply prompt** — one focused question for substantive discussion.
 
-Use [post.md](post.md) for Post patterns. Every promotional Post must provide independent value; do not produce repeated link drops or engagement bait.
+Use [post-guides.md](post-guides.md) for Post patterns. Every promotional Post must provide independent value; do not produce repeated link drops or engagement bait.
 
 Do not add distribution assets when the user requests only the Article.
 
@@ -151,6 +165,9 @@ Revise until all applicable checks pass.
 
 - The title is specific and fulfilled by the Article.
 - The opening establishes value within 3–5 short paragraphs.
+- The Article stays within the 600–900-word short-to-medium target unless the subject requires more space.
+- Shortening has not removed necessary evidence, context, limitations, or verification.
+- The Article contains one claim that can be responsibly established at this length.
 - Paragraphs and sections are readable on mobile.
 - Formatting improves comprehension rather than decorating the page.
 - The final question is specific enough to answer meaningfully.
