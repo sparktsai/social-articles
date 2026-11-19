@@ -39,15 +39,15 @@ Topic Chat Recorder 不負責：
 
 | 平台     | 數量 | 形式                              | 主要任務                                             |
 | -------- | ---: | --------------------------------- | ---------------------------------------------------- |
-| Medium   |    6 | 完整 Story                        | 建立完整觀點、模型、案例與工作流                     |
-| LinkedIn |   13 | 1 篇 Article＋12 篇 Posts         | Article 建立十二種對話形態；Posts 各自建立一個專業觀點 |
-| X        |   36 | Standalone short Post，可互相回應 | 將 distinction、問題、反例與邊界拆成容易回應的小單位 |
+| Medium   |   10 | 完整 Story                         | 建立完整觀點、模型、案例與工作流                         |
+| LinkedIn |    8 | 2 篇 Articles＋6 篇 Posts          | Articles 建立分類與對話前方法；Posts 建立獨立專業觀點    |
+| X        |   38 | 2 篇 Articles＋36 篇 short Posts  | Articles 建立完整觀點；Posts 拆解為容易回應的小單位      |
 
 Medium 是完整論述來源，但 LinkedIn 與 X 不直接摘要 Medium。每個平台都需依自己的閱讀情境重寫。
 
 ---
 
-# Medium — 6 Stories
+# Medium — 10 Stories
 
 ## M_CRR_A_01 — Your AI Conversation Ended. Its Topics Did Not.
 
@@ -71,27 +71,117 @@ Medium 是完整論述來源，但 LinkedIn 與 X 不直接摘要 Medium。每�
 
 對話結束不代表主題完成；值得延續的 Topic 需要獨立於 chat interface 的可攜記錄。
 
-## M_CRR_A_02 — The Same AI Output Can Mean Different Things
+## M_CRR_A_02 — Four Ways Humans Receive Help from AI
+
+### 涵蓋形態
+
+Inquiry、Learning、Advisory、Assistance。
 
 ### 核心問題
 
-為什麼不能把所有 AI 回答視為相同的資訊？
+Human 都是在「向 AI 取得內容」，但取得答案、建立理解、接受建議與取得局部支援，為什麼不是同一件事？
 
 ### 重點
 
-- 依 Human–AI 角色與互動關係整理十二種對話類型。
-- Human 從 AI 取得內容：發問、學習、建議、輔助。
-- Human 與 AI 共同發展：討論、探索、分析、創作。
-- AI 評估或挑戰 Human：評論、審查、辯證。
-- AI 協助 Human 回看自己：反思。
-- 同一句「這個方案有三項風險」可能是學習內容、分析結果、建議依據、審查問題或待查證線索。
-- 驗證、編修、整理與模擬可作為跨類型活動標記。
+- Inquiry：保存具體問題、答案、釐清與衍生問題；再利用為 FAQ 與答案索引。
+- Learning：保存解釋、例子、誤解與理解歷程；再利用為學習筆記與知識缺口。
+- Advisory：保存選項、條件、利弊與建議理由；再利用為決策比較及採納結果回顧。
+- Assistance：保存查詢、查證、來源線索與未確認項目；再利用為研究追蹤及主要工作的支援材料。
+- 比較 Inquiry 與 Learning：找到答案不等於形成理解。
+- 比較 Advisory 與 Assistance：前者協助選擇，後者服務另一項主要任務。
+- AI 提供的答案、建議與來源線索都不能自動視為已驗證事實。
+
+### 工具與產出
+
+Obsidian／NotebookLM 用於 FAQ 與學習；Spreadsheet／ADR 用於建議比較；Zotero 用於外部來源管理。
 
 ### 讀者帶走的判斷
 
-內容的再利用方式取決於它在對話中的角色，而不只是文字表面。
+即使內容都來自 AI，它在對話中可能分別是答案、解釋、選項或待查證線索；記錄後也應進入不同工作流。
 
-## M_CRR_A_03 — What Is Worth Recording?
+## M_CRR_A_03 — Four Ways Humans and AI Develop Content Together
+
+### 涵蓋形態
+
+Discussion、Exploration、Analysis、Creation。
+
+### 核心問題
+
+Human 與 AI 共同發展內容時，如何區分交換觀點、發現方向、建立推論與產生作品？
+
+### 重點
+
+- Discussion：保存觀點、分支、共識與分歧；再利用為後續討論與思想演變。
+- Exploration：保存新問題、早期假設與意外方向；再利用為 research questions 與 Idea backlog。
+- Analysis：保存條件、假設、關係、推論與結論；再利用為分析報告、模型與 decision record。
+- Creation：保存概念、結構、草稿、替代版本與取捨；再利用為文章、簡報與未來素材。
+- 比較 Discussion 與 Exploration：前者已有討論對象，後者可能仍在尋找問題。
+- 比較 Analysis 與 Creation：前者建立判斷，後者形成作品。
+- 保存創作過程不等於證明 Human authorship 或 originality。
+
+### 案例
+
+以本系列從「有哪些 AI 對話類型」逐步發展成產品定位、內容模型與系列規劃為例。
+
+### 讀者帶走的判斷
+
+共同發展的價值往往存在於分支、假設與被放棄的方向，而不只存在於最後答案。
+
+## M_CRR_A_04 — Three Ways AI Evaluates or Challenges Human Work
+
+### 涵蓋形態
+
+Critique、Review、Dialectic。
+
+### 核心問題
+
+AI 對 Human 內容提出意見時，評論、審查與辯證有何差異？
+
+### 重點
+
+- Critique：保存評價標準、優缺點與閱讀反應；再利用為定位與表達改善。
+- Review：保存問題、缺漏、標準、修正要求與處理狀態；再利用為 Issue、checklist 與再次審查。
+- Dialectic：保存反例、反駁、成立條件與主張修正；再利用為論證地圖與更強的主張。
+- Critique 提供評價；Review 對照標準判斷；Dialectic 透過多輪挑戰改變主張。
+- Revision 與 Verification 是可能出現在三者中的活動，不必另立為互斥類型。
+
+### 案例
+
+同一篇產品詳情可以先接受讀者觀點評論，再接受能力邊界審查，最後用反方觀點檢驗核心主張。
+
+### 讀者帶走的判斷
+
+「AI 給了意見」不足以描述內容的地位；必須知道那是評價、問題判定，還是對主張的挑戰。
+
+## M_CRR_A_05 — Reflection: When AI Helps Human Look Back
+
+### 涵蓋形態
+
+Reflection，以及十二種形態之間的轉換關係。
+
+### 核心問題
+
+當 AI 不再主要提供外部答案，而是協助 Human 回顧自己的理解、選擇與改變時，對話記錄有什麼不同價值？
+
+### 重點
+
+- Reflection 保存認知變化、錯誤理解、決策原因與經驗教訓。
+- 它記錄的不是 AI 知道什麼，而是 Human 如何改變。
+- 可再利用為 journal、retrospective、個人原則與改善計畫。
+- 同一段 Chat 可以從 Inquiry 轉為 Discussion、Exploration、Analysis、Critique、Creation、Review，最後進入 Reflection。
+- Verification、Revision、Organization 與 Simulation 是可以跨越多種形態的第二層活動。
+- 提供十二種形態的摘要矩陣，連接主要保存內容、再利用方向與代表工具。
+- 說明十二種形態不是 Topic Chat Recorder 的自動分類功能，而是協助使用者判斷什麼值得保存。
+
+### 完整案例
+
+回顧 CRR 對話如何從初始分類問題發展成修正版模型、再利用工具、Capafy 詳情與跨平台內容規劃。
+
+### 讀者帶走的判斷
+
+對話記錄不只保存 AI 的輸出，也能保存 Human 的思想如何形成、被挑戰並發生改變。
+
+## M_CRR_A_06 — What Is Worth Recording?
 
 ### 核心問題
 
@@ -113,7 +203,7 @@ Medium 是完整論述來源，但 LinkedIn 與 X 不直接摘要 Medium。每�
 
 好的記錄策略不是保存最多，而是保存未來仍可能改變行動或理解的內容。
 
-## M_CRR_A_04 — Reuse AI Conversations for Learning and Research
+## M_CRR_A_07 — Reuse AI Conversations for Learning and Research
 
 ### 核心問題
 
@@ -139,7 +229,7 @@ Conversation → Topic Markdown → Obsidian / NotebookLM
 
 Recorder 保存學習如何發生；知識工具負責讓學習繼續發展。
 
-## M_CRR_A_05 — Reuse AI Conversations for Decisions, Creation, and Work
+## M_CRR_A_08 — Reuse AI Conversations for Decisions, Creation, and Work
 
 ### 核心問題
 
@@ -164,7 +254,7 @@ Record → Select → Verify → Organize → Transform → Trace
 
 對話記錄不是最終成果，而是可以反覆轉換的工作材料。
 
-## M_CRR_A_06 — From One AI Discussion to a Reusable Knowledge Asset
+## M_CRR_A_09 — From One AI Discussion to a Reusable Knowledge Asset
 
 ### 核心問題
 
@@ -184,11 +274,81 @@ Record → Select → Verify → Organize → Transform → Trace
 
 Topic Chat Recorder 的價值不是多保存一份 Chat，而是讓已經投入的思考可以繼續產生結果。
 
+## M_CRR_A_10 — Before You Talk to AI, Decide What Kind of Conversation You Need
+
+### 核心問題
+
+為什麼許多 AI 對話在幾輪後看似內容豐富，卻已經偏離原本的 Topic、目的與預期產出？
+
+### 核心主張
+
+對話漂移不一定是 AI 回答錯誤。很多時候，Human 沒有先決定要進行哪一種對話，也沒有在 AI 提出新方向時確認是否要切換模式。
+
+AI 很擅長延伸問題、補充可能性與提出下一步。這些能力可以帶來探索，也可能讓原本只是查詢、審查或決策的對話，不知不覺變成另一個任務。
+
+### 對話前的六項定義
+
+```text
+Topic：這次要處理哪個主題？
+Mode：需要哪一種對話形態？
+Purpose：為什麼要進行這段對話？
+Output：結束時需要得到什麼？
+Boundary：哪些延伸暫時不處理？
+Stop condition：何時應該收斂、停止或另開 Topic？
+```
+
+### 十二種形態如何改變提示方式
+
+- Inquiry：要求直接回答特定問題，不主動擴張範圍。
+- Learning：要求循序解釋並檢查理解。
+- Advisory：要求提出選項、條件、風險與取捨。
+- Assistance：明確說明主要任務，限制 AI 只提供局部支援。
+- Discussion：允許交換觀點，但維持既定 Topic。
+- Exploration：明確允許發散，並在最後整理新方向。
+- Analysis：先固定資料、假設、條件與判斷問題。
+- Creation：定義作品、讀者、目的及 Human 保留的控制權。
+- Critique：要求依指定觀點或標準提出評價。
+- Review：提供檢查標準、範圍與通過條件。
+- Dialectic：要求 AI 主動提出反例及挑戰主張。
+- Reflection：聚焦 Human 的理解、選擇與變化，不急著產生外部答案。
+
+### 對話中的模式切換
+
+模式可以改變，但應該被明確看見：
+
+```text
+原始模式：Analysis
+AI 提出三個新研究方向
+Human 決定：
+- 留在 Analysis，將新方向記入 backlog；或
+- 明確切換為 Exploration；或
+- 建立另一個 Topic 繼續。
+```
+
+### 每隔幾輪的檢查點
+
+- 我們仍在處理原本的 Topic 嗎？
+- 現在仍是原本選擇的對話形態嗎？
+- AI 新增的內容服務原目的，還是形成另一個目的？
+- 預期產出是否已經改變？
+- 應該繼續、收斂，還是另開 Topic？
+
+### 與 Topic Chat Recorder 的關係
+
+- 開始前以 Topic 命名，協助建立對話邊界。
+- 使用局部記錄保存真正屬於該 Topic 的內容。
+- 若對話產生獨立方向，應建立另一個 Topic，而不是把所有內容混在同一筆記。
+- 記錄能呈現何時發生漂移，但不會自動替使用者維持目的或阻止模式切換。
+
+### 讀者帶走的判斷
+
+不要只問「我要問 AI 什麼？」也要先問：「我希望 Human 與 AI 進行哪一種對話，最後要得到什麼？」
+
 ---
 
-# LinkedIn — 1 Article + 12 Posts
+# LinkedIn — 2 Articles + 6 Posts
 
-Article 用來完整建立十二種 Human–AI 對話形態；12 篇 Posts 則各自處理一個可獨立成立的觀點。Posts 控制在 3,000 characters 內，正文必須能獨立成立，不依賴 Article 或 Medium 連結補足主張。
+Article 用來完整建立十二種 Human–AI 對話形態；6 篇 Posts 則各自合併兩個相鄰觀點，形成一篇可獨立成立的完整論述。每篇先以真實工作問題作為 Hook，結尾邀請讀者分享如何處理。Posts 控制在 3,000 characters 內，正文不依賴 Article 或 Medium 連結補足主張。
 
 ## L_CRR_A_01 — Twelve Ways Humans and AI Develop a Conversation
 
@@ -300,32 +460,72 @@ But asking, learning, discussing, exploring, analyzing, creating, reviewing, and
 
 > Record the interaction so its questions, reasoning, decisions, and unfinished work can be reused after the chat ends.
 
+## L_CRR_A_02 — Decide the Conversation Before AI Decides the Direction
+
+### 核心問題
+
+為什麼原本明確的 AI 任務，經過幾輪後會變成另一場對話，甚至產出與原目的無關的內容？
+
+### 專業情境
+
+- 原本只想查證一個事實，最後變成產品策略討論。
+- 原本要求審查文件，AI 卻開始重寫整份內容。
+- 原本需要分析選項，幾輪後開始無限制探索新方向。
+- AI 的延伸可能有價值，但 Human 沒有明確決定是否改變任務。
+
+### 核心框架
+
+對話開始前先定義：
+
+1. **Topic**：這次處理什麼？
+2. **Mode**：十二種形態中的哪一種？
+3. **Purpose**：為什麼需要這段對話？
+4. **Output**：最後要得到什麼 artifact 或 decision？
+5. **Boundary**：哪些延伸不在本次範圍？
+6. **Stop condition**：何時應該收斂、停止或另開 Topic？
+
+### 關鍵 distinction
+
+- 漂移不是所有延伸都不好，而是目的已改變卻沒有被明確決定。
+- Exploration 可以有意發散；Review 則應受到標準與範圍限制。
+- 模式可以切換，但切換應由 Human 確認。
+- AI 可以提出新方向；Human 應決定繼續、放入 backlog 或另開 Topic。
+
+### 可直接採用的 checkpoint
+
+```text
+Are we still discussing the same topic?
+Are we still using the same conversation mode?
+Does this direction support the original purpose?
+Should this become a separate topic?
+```
+
+### 與產品的連接
+
+Topic Chat Recorder 可以保存對話如何發展，讓使用者事後看見目的與形態何時改變；但 Recorder 不會自動控制對話方向。保持 Topic 和目的仍是 Human 的責任。
+
+### 收尾主張
+
+> Before asking AI what to do, decide what kind of conversation you want to have—and what must still be true when it ends.
+
 ## L_CRR_P_01_01 — A Conversation Can End Before Its Topic Does
 
-- 工作情境：使用者關閉 chat，幾天後仍需要繼續其中一個問題。
+- 現實 Hook：記得曾與 AI 討論重要決定，卻找不到在哪一個 chat。
+- 工作情境：使用者關閉 chat，幾天後仍需要繼續其中一個問題；同一 Topic 也可能分散在多個 session。
 - 核心 distinction：Chat completion ≠ Topic completion。
-- 目的：建立系列最核心的問題意識。
-- 導向：哪些 Topic 值得跨 session 保留？
-
-## L_CRR_P_01_02 — Chat History Is Organized Around Sessions, Not Your Work
-
-- 工作情境：記得內容，卻不記得在哪一天或哪一個 chat。
-- 核心 distinction：Session 是平台容器；Topic 是使用者的工作單位。
-- 目的：說明 topic-based recording 與一般 history 的差異。
+- 同時說明：Session 是平台容器；Topic 是使用者的工作單位。
+- 目的：建立系列問題意識，並說明 topic-based recording 與一般 history 的差異。
 - 不宣稱：產品具備搜尋 UI 或自動分類。
+- 結尾提問：讀者如何在原始 chat 結束後找回並延續有價值的工作？
 
 ## L_CRR_P_02_01 — The Same AI Sentence Can Have Five Different Meanings
 
 - 以「這個方案有三項風險」為例。
 - 分別作為學習、分析、建議、審查及查證線索。
 - 目的：引出 Human–AI 角色決定內容意義。
+- 延伸：AI conversations 不只是 Q&A；不同互動會產生 FAQ、學習筆記、決策紀錄、Issue 或 retrospective。
 - 導向：記錄需要保留關係與脈絡，不只是文字。
-
-## L_CRR_P_02_02 — AI Conversations Are Not Just Q&A
-
-- 對比發問、學習、討論、探索、分析、創作、審查與反思。
-- 不列完整百科式定義，而是說明不同互動產生不同可重用內容。
-- 目的：拓展讀者對 AI conversation value 的理解。
+- 結尾提問：團隊如何避免 AI 建議在再利用時失去原始脈絡？
 
 ## L_CRR_P_03_01 — Not Every AI Chat Is Worth Saving
 
@@ -333,13 +533,9 @@ But asking, learning, discussing, exploring, analyzing, creating, reviewing, and
 - 使用一次性翻譯與跨 session 決策作對比。
 - 目的：避免產品被理解成無差別備份工具。
 - 核心句：Record for future use, not for accumulation.
-
-## L_CRR_P_03_02 — Recording More Is Not the Same as Remembering Better
-
-- 長 transcript 可能增加查找和理解成本。
-- 需要先定義 Topic 與記錄範圍。
-- 完整匯出與局部 capture 各有適用情況。
-- 目的：建立 selective recording 的方法。
+- 同時說明：長 transcript 可能增加查找和理解成本；完整匯出與局部 capture 各有適用情況。
+- 方法：先定義 Topic、Purpose、Expected output、Boundary 與 Stop condition。
+- 結尾提問：讀者如何判斷哪些 AI conversations 應保存，以及有效範圍在哪裡？
 
 ## L_CRR_P_04_01 — A Chat Export Is Not Yet a Knowledge Base
 
@@ -347,47 +543,96 @@ But asking, learning, discussing, exploring, analyzing, creating, reviewing, and
 - Topic Chat Recorder 是上游記錄層，不取代 Obsidian 或 NotebookLM。
 - 目的：說明產品邊界並建立可信度。
 - 核心句：Portable input is valuable because it can leave the original chat tool.
-
-## L_CRR_P_04_02 — AI Answers Are Research Material, Not Verified Sources
-
-- 對話記錄可保存查詢與推論，但不能證明答案正確。
-- Zotero 保存外部來源；Topic record 保存為何查詢及如何使用。
-- 目的：建立 research provenance 的正確邊界。
+- 同時說明：AI answers 是 research material，不是 verified sources；Zotero 保存外部來源，Topic record 保存查詢原因與使用過程。
+- 目的：建立 knowledge-base 與 research provenance 的正確邊界。
 - 避免：把 AI citation 當作事實查證完成。
+- 結尾提問：團隊如何防止合理但未驗證的 AI 回答變成「已驗證知識」？
 
 ## L_CRR_P_05_01 — Do Not Lose the Reasoning Behind a Decision
 
 - 只保存結論會失去條件、替代方案與取捨。
 - 對話記錄可轉成 decision matrix 或 ADR。
 - 目的：連接分析型、建議型對話與專業決策。
-- 提問：你的團隊保存決定，還是也保存決定如何形成？
-
-## L_CRR_P_05_02 — The Final Draft Hides the Conversation That Shaped It
-
-- 最終文章看不出哪些構想被提出、拒絕或修正。
-- 對話記錄可作為未來改版與跨平台改寫的素材。
-- 目的：連接創作、評論、辯證和編修。
+- 延伸：最終文章同樣看不出哪些構想被提出、拒絕或修正；對話記錄可作為改版與跨平台改寫素材。
+- 目的：同時連接專業決策，以及創作、評論、辯證和編修。
 - 邊界：記錄形成過程不等於證明法律上的 authorship。
+- 結尾提問：團隊如何保存決策與草稿背後的 reasoning，而不只保存結果？
 
 ## L_CRR_P_06_01 — Record → Select → Verify → Organize → Transform → Trace
 
 - 提出六步驟再利用流程。
 - 每一步只解決一個問題，不把所有能力宣稱為 Recorder 內建。
-- 目的：給讀者一個可以直接採用的操作框架。
+- 使用 CRR 實際案例呈現 Topic 如何從分類討論轉換成產品說明與跨平台文章系列。
+- 目的：給讀者可直接採用的操作框架，並以真實產出呈現再利用價值。
 - 可搭配單張流程圖。
-
-## L_CRR_P_06_02 — This Content Series Began as an AI Conversation
-
-- 使用 CRR 實際案例呈現從分類討論到文章系列與 Capafy listing。
-- 展示 Topic 如何跨越分析、創作、評論與反思。
-- 目的：以真實產出證明再利用價值。
-- 收尾：The value of an AI conversation does not end when the chat ends.
+- 結尾提問：讀者使用什麼流程，將 AI transcript 轉換成團隊可以信任並再利用的成果？
 
 ---
 
-# X — 36 Short Posts
+# X — 2 Articles + 36 Short Posts
 
-每篇都是可獨立閱讀、可直接回應的 Standalone Post。三篇為一個觀點群，但不要求讀者按順序閱讀，也不使用「Part 1／Part 2」作為理解前提。
+X 以 2 篇長篇 Articles 建立完整觀點，再用 36 篇可獨立閱讀、可直接回應的短 Posts 拆解不同切角。短 Posts 每三篇為一個觀點群，但不要求讀者按順序閱讀，也不使用「Part 1／Part 2」作為理解前提。
+
+## X_CRR_A_01 — Twelve Ways Humans and AI Develop a Conversation
+
+### 文章目的
+
+在一篇 X Article 中完整介紹十二種 Human–AI 對話形態，讓後續短 Posts 有可引用的分類入口。
+
+### 結構
+
+1. 為什麼 AI conversation 不只是 Q&A。
+2. 分類基礎：Human 角色、AI 角色、互動關係與內容地位。
+3. Human 從 AI 取得內容：Inquiry、Learning、Advisory、Assistance。
+4. Human 與 AI 共同發展：Discussion、Exploration、Analysis、Creation。
+5. AI 評估或挑戰 Human：Critique、Review、Dialectic。
+6. AI 協助 Human 回看自己：Reflection。
+7. Verification、Revision、Organization、Simulation 作為跨類型活動。
+8. 同一段 Chat 如何在多種形態之間轉換。
+9. 每種形態產生的內容及再利用方向。
+10. Topic Chat Recorder 保存對話，但不會自動分類或驗證內容。
+
+### 呈現方式
+
+- 比 LinkedIn Article 更直接、更短段落。
+- 使用一張十二種類型分組圖或表格。
+- 每種類型用「角色 → 內容 → 再利用」三個元素說明。
+- 文章本身完整成立，不要求先閱讀 Medium。
+
+### 核心主張
+
+> The same AI output can mean different things because Human and AI were doing different things together.
+
+## X_CRR_A_02 — Choose the Conversation Before It Drifts
+
+### 核心問題
+
+在開始與 AI 對話前，如何先定義目的，避免幾輪之後被有趣但無關的延伸帶離原本 Topic？
+
+### 結構
+
+1. 以常見漂移案例開場：從查詢變策略、從 Review 變 Rewrite、從 Analysis 變無限制 Exploration。
+2. 說明漂移的問題不是 AI 提出新方向，而是 Human 沒有明確決定是否切換目的。
+3. 提出對話前定義卡：Topic、Mode、Purpose、Output、Boundary、Stop condition。
+4. 說明十二種形態需要不同提示與邊界。
+5. 提供每隔幾輪可使用的 alignment checkpoint。
+6. 區分有意 Exploration 與無意 Drift。
+7. 新方向的三種處理：繼續、放入 backlog、另開 Topic。
+8. 說明 Topic Chat Recorder 可以保存漂移過程，但不能代替 Human 維持目的。
+
+### 可引用檢查表
+
+```text
+What topic am I working on?
+What kind of conversation do I need?
+What output should exist at the end?
+What is outside this conversation?
+When should I stop or open a new topic?
+```
+
+### 核心主張
+
+> Do not enter an AI conversation with only a prompt. Enter it with a purpose, a mode, and a boundary.
 
 ## Group 01 — Conversation vs Topic
 
@@ -567,14 +812,15 @@ But asking, learning, discussing, exploring, analyzing, creating, reviewing, and
 ## Medium
 
 - 每篇建立一個完整 argument，不將多篇 LinkedIn Post 串接後當成 Medium。
+- 使用 1 篇完整 Story 說明如何在對話前選擇形態、目的、產出與邊界。
 - 必須包含具體案例、機制、限制與讀者可採用的方法。
 - 需要完整說明時使用小標題；避免把文章寫成產品功能清單。
 - Capafy CTA 只放在讀者已理解問題與方法之後。
 
 ## LinkedIn
 
-- 使用 1 篇 Article 完整說明十二種對話形態；其餘內容使用獨立 Posts。
-- Article 建立完整分類模型，但不承擔所有產品操作與工具教學。
+- 使用 1 篇 Article 完整說明十二種對話形態，再用 1 篇 Article 說明對話前如何選擇形態並防止無意漂移；其餘內容使用獨立 Posts。
+- Articles 建立完整分類與方法，但不承擔所有產品操作與工具教學。
 - 一篇只建立一個主要觀點。
 - 開頭直接進入專業工作情境，不用 generic AI hook。
 - Post 本身先提供完整價值；外部連結只是補充。
@@ -582,6 +828,7 @@ But asking, learning, discussing, exploring, analyzing, creating, reviewing, and
 
 ## X
 
+- 使用 1 篇 Article 介紹十二種對話形態，再用 1 篇 Article 說明如何先定義目的、模式與邊界。
 - 優先使用獨立短 Post，不要求讀者看過前文。
 - 每篇只處理一個 distinction、反例、問題或邊界。
 - 延續 BRA／EBG 的做法：同一個核心觀點拆成多個可獨立回應的切角。
@@ -599,3 +846,4 @@ But asking, learning, discussing, exploring, analyzing, creating, reviewing, and
 4. Markdown 記錄可以交給既有工具再利用。
 5. Topic Chat Recorder 減少的是擷取與保留脈絡的人工成本。
 6. Recorder 保存過程，但不誇大為正確性、原創性或不可竄改證明。
+7. 與 AI 對話前先選擇形態、目的、預期產出與邊界，並在需要切換模式時由 Human 明確決定。
