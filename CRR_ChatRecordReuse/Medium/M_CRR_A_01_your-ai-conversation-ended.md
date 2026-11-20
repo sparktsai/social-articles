@@ -1,6 +1,6 @@
 # Your AI Conversation Ended. Its Topics Did Not.
 
-![AI and Human preserve a topic after the chat ends](illustrations/M_CRR_A_01.png)
+![AI and Human preserve a topic after the chat ends](M_CRR_A_01.png)
 
 > Chat history remembers where a conversation happened. It does not necessarily preserve what still needs to happen next.
 

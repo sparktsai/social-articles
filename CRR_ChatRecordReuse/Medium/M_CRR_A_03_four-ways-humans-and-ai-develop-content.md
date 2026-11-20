@@ -1,6 +1,6 @@
 # Four Ways Humans and AI Develop Content Together
 
-![AI and Human develop content through four conversation forms](illustrations/M_CRR_A_03.png)
+![AI and Human develop content through four conversation forms](M_CRR_A_03.png)
 
 > Discussion, exploration, analysis, and creation can happen in the same chat. They do not produce the same kind of material.
 

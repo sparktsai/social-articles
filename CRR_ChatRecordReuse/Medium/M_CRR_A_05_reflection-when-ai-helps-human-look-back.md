@@ -1,6 +1,6 @@
 # Reflection: When AI Helps Human Look Back
 
-![AI supports Human reflection across changing understanding](illustrations/M_CRR_A_05.png)
+![AI supports Human reflection across changing understanding](M_CRR_A_05.png)
 
 > Some AI conversations are not mainly about obtaining an answer. They are about seeing how your own understanding changed.
 

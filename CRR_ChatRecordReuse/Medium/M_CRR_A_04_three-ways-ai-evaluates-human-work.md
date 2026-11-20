@@ -1,6 +1,6 @@
 # Three Ways AI Evaluates or Challenges Human Work
 
-![AI and Human work through critique review and dialectic](illustrations/M_CRR_A_04.png)
+![AI and Human work through critique review and dialectic](M_CRR_A_04.png)
 
 > “Give me feedback” can mean at least three different things: evaluate this, inspect this, or challenge this.
 

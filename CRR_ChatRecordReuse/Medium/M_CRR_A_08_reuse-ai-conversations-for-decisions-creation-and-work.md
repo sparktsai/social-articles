@@ -1,6 +1,6 @@
 # Reuse AI Conversations for Decisions, Creation, and Work
 
-![AI conversations become decisions creative artifacts and tracked work](illustrations/M_CRR_A_08.png)
+![AI conversations become decisions creative artifacts and tracked work](M_CRR_A_08.png)
 
 > The transcript is not the deliverable. It is the material from which decisions, artifacts, and work can be produced.
 
@@ -43,10 +43,10 @@ An analysis or advisory conversation may contain:
 
 Those elements can be moved into a decision matrix:
 
-| Option | Conditions | Benefits | Risks | Evidence | Decision |
-|---|---|---|---|---|---|
-| A | Works under condition X | Lower cost | Limited scale | Needs verification | Rejected |
-| B | Requires Y | Better fit | Higher setup cost | Supported | Selected |
+| Option | Conditions              | Benefits   | Risks             | Evidence           | Decision |
+| ------ | ----------------------- | ---------- | ----------------- | ------------------ | -------- |
+| A      | Works under condition X | Lower cost | Limited scale     | Needs verification | Rejected |
+| B      | Requires Y              | Better fit | Higher setup cost | Supported          | Selected |
 
 The matrix is easier to compare and update than a long transcript.
 

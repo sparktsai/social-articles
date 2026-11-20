@@ -1,6 +1,6 @@
 # What Is Worth Recording?
 
-![AI and Human select the conversation material worth recording](illustrations/M_CRR_A_06.png)
+![AI and Human select the conversation material worth recording](M_CRR_A_06.png)
 
 > A good conversation-recording strategy does not preserve everything. It preserves what would be expensive or impossible to reconstruct later.
 

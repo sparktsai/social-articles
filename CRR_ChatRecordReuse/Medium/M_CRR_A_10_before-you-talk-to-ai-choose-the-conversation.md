@@ -1,6 +1,6 @@
 # Before You Talk to AI, Choose the Conversation
 
-![Human sets the purpose mode and boundary before talking to AI](illustrations/M_CRR_A_10.png)
+![Human sets the purpose mode and boundary before talking to AI](M_CRR_A_10.png)
 
 > Do not enter an AI conversation with only a prompt. Enter it with a purpose, a mode, and a boundary.
 

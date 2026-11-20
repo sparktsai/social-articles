@@ -1,6 +1,6 @@
 # From One AI Discussion to a Reusable Knowledge Asset
 
-![AI and Human transform a discussion into a traceable knowledge asset](illustrations/M_CRR_A_09.png)
+![AI and Human transform a discussion into a traceable knowledge asset](M_CRR_A_09.png)
 
 > This series did not begin as a content plan. It began as a question inside an AI conversation.
 
@@ -226,7 +226,7 @@ That is the distinction:
 
 Topic Chat Recorder preserves selected Codex and Claude Code conversations as topic-based, reusable Markdown. It is the recording layer used at the beginning of this workflow—not a replacement for Human selection, verification, or transformation.
 
-[View Topic Chat Recorder in the marketplace]([[TOPIC_CHAT_RECORDER_MARKETPLACE_LINK]])
+[View Topic Chat Recorder in the marketplace](https://capafy.ai/zh-hant/agent/topic-chat-recorder)
 
 Chat Record Reuse · 09 / 10
 

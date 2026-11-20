@@ -1,6 +1,6 @@
 # Four Ways Humans Receive Help from AI
 
-![AI and Human exchange four forms of help](illustrations/M_CRR_A_02.png)
+![AI and Human exchange four forms of help](M_CRR_A_02.png)
 
 > An AI response can be an answer, an explanation, a recommendation, or a supporting lead. Those are not interchangeable.
 

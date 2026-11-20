@@ -50,7 +50,7 @@ Recording preserves possibility. Selection, verification, organization, and tran
 
 Topic Chat Recorder preserves selected Codex and Claude Code conversations as topic-based Markdown—the upstream input for this workflow.
 
-View it in the marketplace: [[TOPIC_CHAT_RECORDER_MARKETPLACE_LINK]]
+View it in the marketplace: https://capafy.ai/zh-hant/agent/topic-chat-recorder
 
 What process do you use to turn an AI transcript into something your team can actually trust and reuse?
 

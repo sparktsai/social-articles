@@ -1,6 +1,6 @@
 # Reuse AI Conversations for Learning and Research
 
-![AI supports learning while Human verifies research evidence](illustrations/M_CRR_A_07.png)
+![AI supports learning while Human verifies research evidence](M_CRR_A_07.png)
 
 > A recorded conversation is not yet a knowledge base or a verified source. It is material that can enter both.
 
