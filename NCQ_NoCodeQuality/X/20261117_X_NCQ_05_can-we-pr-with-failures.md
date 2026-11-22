@@ -4,6 +4,7 @@ A failed Test does not always block a pull request. But “fix it next sprint”
 
 Proceed only when impact, mitigation, ownership, and the authorized gate are explicit and traceable.
 
-Full article: [[MEDIUM_LINK]]
+Full article 👇 
+https://medium.com/@spark.tsai/can-a-pull-request-proceed-with-failed-or-unverified-criteria-538a66adf0ec
 
-#NoCodeQuality #SoftwareQuality
+#NoCodeQuality #PullRequest #RiskAcceptance #SoftwareDelivery #HumanInTheLoop
