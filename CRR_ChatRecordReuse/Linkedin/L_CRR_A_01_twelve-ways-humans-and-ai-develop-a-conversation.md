@@ -257,20 +257,29 @@ Recording by topic keeps the continuity. Identifying the conversation form prese
 
 The form helps determine what to extract, which tools may be useful, and what value the next artifact can provide.
 
-| Form | Preserve from the conversation | Possible next tool or artifact | Reuse value |
-|---|---|---|---|
-| Inquiry | Question, answer, qualification | Searchable notes or FAQ | Faster retrieval |
-| Learning | Explanations, examples, confusion, correction | Study guide or flashcards | Retained understanding |
-| Advisory | Options, constraints, trade-offs, assumptions | Decision matrix or ADR | Accountable choice |
-| Assistance | Query, sources, checks, uncertainty | Research log or evidence table | Verifiable support |
-| Discussion | Positions, agreements, disagreements | Viewpoint map or meeting brief | Continued deliberation |
-| Exploration | Hypotheses, branches, open questions | Idea backlog or research plan | New directions |
-| Analysis | Criteria, evidence, assumptions, reasoning | Comparison model or report | Revisable judgment |
-| Creation | Brief, alternatives, drafts, revisions | Article, design, specification, or code | Usable artifact |
-| Critique | Criteria, strengths, weaknesses | Improvement plan | Better quality |
-| Review | Requirement, finding, affected area, status | Checklist, issue tracker, or report | Compliance and correction |
-| Dialectic | Claim, counterexample, response, revised claim | Argument map or risk scenario | More robust reasoning |
-| Reflection | Experience, change, unresolved question | Retrospective or journal | Learning across time |
+**Inquiry** — Preserve the question, answer, and qualifications. Turn them into searchable notes or an FAQ for faster retrieval.
+
+**Learning** — Preserve explanations, examples, confusion, and correction. Turn them into a study guide or flashcards to retain understanding.
+
+**Advisory** — Preserve options, constraints, trade-offs, and assumptions. Turn them into a decision matrix or ADR for a more accountable choice.
+
+**Assistance** — Preserve the query, sources, checks, and uncertainty. Turn them into a research log or evidence record for verifiable support.
+
+**Discussion** — Preserve positions, agreements, and disagreements. Turn them into a viewpoint map or meeting brief to continue deliberation.
+
+**Exploration** — Preserve hypotheses, branches, and open questions. Turn them into an idea backlog or research plan to pursue new directions.
+
+**Analysis** — Preserve criteria, evidence, assumptions, and reasoning. Turn them into a comparison model or report for revisable judgment.
+
+**Creation** — Preserve the brief, alternatives, drafts, and revisions. Turn them into an article, design, specification, or code as a usable artifact.
+
+**Critique** — Preserve the criteria, strengths, and weaknesses. Turn them into an improvement plan for better quality.
+
+**Review** — Preserve the requirement, finding, affected area, and status. Turn them into a checklist, issue tracker, or report for compliance and correction.
+
+**Dialectic** — Preserve the claim, counterexample, response, and revised claim. Turn them into an argument map or risk scenario for more robust reasoning.
+
+**Reflection** — Preserve the experience, change, and unresolved questions. Turn them into a retrospective or journal for learning across time.
 
 Tools do not have to be elaborate. Markdown may be enough for continuity. A spreadsheet can support comparisons. A citation manager can preserve sources. An issue tracker can carry review findings into action. A version-control system can retain the resulting artifacts and revisions.
 
