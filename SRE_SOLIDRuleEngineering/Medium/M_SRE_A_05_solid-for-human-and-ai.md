@@ -302,3 +302,4 @@ SOLID 過去主要保護程式碼，避免需求變動造成失控。
 
 SOLID for AI 還必須保護需求語意，避免它在程式生成與反覆維護中被模型重新解釋。
 
+相關 Repository：[NextEvoEco/solid-rule-engineering](https://github.com/NextEvoEco/solid-rule-engineering.git)

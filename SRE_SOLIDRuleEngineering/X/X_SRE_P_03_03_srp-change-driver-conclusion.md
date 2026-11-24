@@ -1,3 +1,5 @@
-Function 很長，只是結構訊號。
+A long function is only a structural signal.
 
-是否違反 SRP，要看它包含一個完整目的，還是混合了數個彼此獨立的 Change Driver。
+Whether it violates SRP depends on whether it serves one coherent purpose or mixes several independent change drivers.
+
+Repo: https://github.com/NextEvoEco/solid-rule-engineering.git

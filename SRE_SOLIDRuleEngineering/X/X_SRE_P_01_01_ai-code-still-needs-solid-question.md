@@ -1,3 +1,5 @@
-AI 已經可以快速產生、修改，甚至重寫整個 Module。
+AI can already generate, modify, and even rewrite an entire module in minutes.
 
-如果 Code 壞了就重新生成，我們還需要 SOLID 嗎？
+If broken code can simply be regenerated, do we still need SOLID?
+
+Repo: https://github.com/NextEvoEco/solid-rule-engineering.git

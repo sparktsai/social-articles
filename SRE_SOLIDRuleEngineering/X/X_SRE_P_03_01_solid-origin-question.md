@@ -1,3 +1,5 @@
-SOLID 是為了讓 Function 更短、Class 更小、Interface 更多嗎？
+Is SOLID about shorter functions, smaller classes, and more interfaces?
 
-還是為了控制需求變動造成的修改擴散？
+Or is it about controlling how requirement changes propagate through a system?
+
+Repo: https://github.com/NextEvoEco/solid-rule-engineering.git

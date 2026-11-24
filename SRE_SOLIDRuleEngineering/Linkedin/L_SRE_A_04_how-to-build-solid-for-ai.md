@@ -276,3 +276,4 @@ SOLID 過去協助 Human 控制需求變動造成的程式修改。
 
 SOLID for AI 還必須控制模型如何推論變動，並保存 Requirement 與 Design 之間的關係。
 
+相關 Repository：[NextEvoEco/solid-rule-engineering](https://github.com/NextEvoEco/solid-rule-engineering.git)

@@ -1,5 +1,7 @@
-修改 Code，是產生一個可以通過 Test 的 Diff。
+Changing code means producing a diff that passes the tests.
 
-維護 Software，還要理解需求變動、保存既有契約，並控制修改影響。
+Maintaining software also means understanding requirement changes, preserving existing contracts, and controlling change impact.
 
-兩者不是同一件事。
+They are not the same thing.
+
+Repo: https://github.com/NextEvoEco/solid-rule-engineering.git

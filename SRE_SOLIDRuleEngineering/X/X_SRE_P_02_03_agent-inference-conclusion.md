@@ -1,3 +1,5 @@
-AI 維護最危險的地方，不一定是第一次推論錯誤。
+The greatest risk in AI maintenance may not be the first incorrect inference.
 
-而是下一個 Agent 將前一個 Agent 的推論，當成既有設計事實。
+It is the next agent treating the previous agent's inference as an established design fact.
+
+Repo: https://github.com/NextEvoEco/solid-rule-engineering.git

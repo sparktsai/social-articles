@@ -1,3 +1,5 @@
-AI 能讀取 Repository、修改 Code、執行 Test，並修正到全部通過。
+AI can read a repository, modify code, run tests, and keep fixing failures until everything passes.
 
-這代表它會維護 Software，還是只會完成修改任務？
+Does that mean it can maintain software—or only complete modification tasks?
+
+Repo: https://github.com/NextEvoEco/solid-rule-engineering.git

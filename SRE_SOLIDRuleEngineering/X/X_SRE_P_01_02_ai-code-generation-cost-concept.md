@@ -1,3 +1,5 @@
-Code Generation Cost 下降，不代表 Requirement Change Cost 消失。
+Lower code generation cost does not eliminate the cost of requirement change.
 
-AI 讓程式碼容易產生，沒有讓修改影響、需求驗證與風險判斷變得容易。
+AI makes code easier to produce. It does not make change impact, requirement verification, or risk judgment easy.
+
+Repo: https://github.com/NextEvoEco/solid-rule-engineering.git

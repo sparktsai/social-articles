@@ -1,5 +1,7 @@
-每個 Interface、Variation Point 與 Abstraction，都應該能回答：
+Every interface, variation point, and abstraction should answer:
 
-「它來自哪一項 Requirement、Policy 或 Change Scenario？」
+Which requirement, policy, or change scenario does it come from?
 
-答不出來，就是無根的變動性。
+Without an answer, the variability has no root.
+
+Repo: https://github.com/NextEvoEco/solid-rule-engineering.git

@@ -1,3 +1,5 @@
-把 SRP、OCP、LSP、ISP、DIP 寫進 Prompt，就能讓 AI 遵守 SOLID 嗎？
+Does putting SRP, OCP, LSP, ISP, and DIP into a prompt make AI follow SOLID?
 
-如果 AI 不知道真正的 Change Driver，它是在設計，還是在模仿 SOLID 的外觀？
+If AI does not know the real change drivers, is it designing—or merely imitating the appearance of SOLID?
+
+Repo: https://github.com/NextEvoEco/solid-rule-engineering.git

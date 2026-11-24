@@ -1,3 +1,5 @@
-SOLID 的源頭不是 Code Style，而是 Change Management。
+SOLID is rooted not in code style, but in change management.
 
-它關心的是：當需求改變時，哪些程式應該修改，哪些不應受到影響。
+It asks: when a requirement changes, which code should change—and which code should remain unaffected?
+
+Repo: https://github.com/NextEvoEco/solid-rule-engineering.git

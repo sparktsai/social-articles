@@ -1,3 +1,5 @@
-AI 可以重新產生 Code，不能重新產生從未被保存的 Business Rule、Constraint 與 Design Rationale。
+AI can regenerate code. It cannot regenerate business rules, constraints, or design rationale that were never preserved.
 
-Code 越便宜，設計依據反而越重要。
+The cheaper code becomes, the more important its design basis becomes.
+
+Repo: https://github.com/NextEvoEco/solid-rule-engineering.git
